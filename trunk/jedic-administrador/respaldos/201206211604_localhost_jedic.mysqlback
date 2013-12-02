@@ -1,0 +1,389 @@
+-- MySQL dump 10.13  Distrib 5.5.16, for Win32 (x86)
+--
+-- Host: localhost    Database: jedic
+-- ------------------------------------------------------
+-- Server version	5.5.16
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `alumno`
+--
+
+DROP TABLE IF EXISTS `alumno`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `alumno` (
+  `cod_alu` int(11) NOT NULL AUTO_INCREMENT,
+  `nom_alu` varchar(50) DEFAULT NULL,
+  `usu_alu` varchar(50) DEFAULT NULL,
+  `pas_alu` varchar(12) DEFAULT NULL,
+  `cod_sec` int(11) DEFAULT NULL,
+  `ano_alu` int(11) DEFAULT NULL,
+  `ema_alu` varchar(80) DEFAULT NULL,
+  PRIMARY KEY (`cod_alu`),
+  KEY `cod_sec` (`cod_sec`),
+  CONSTRAINT `alumno_ibfk_1` FOREIGN KEY (`cod_sec`) REFERENCES `seccion` (`cod_sec`)
+) ENGINE=InnoDB AUTO_INCREMENT=61 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `alumno`
+--
+
+LOCK TABLES `alumno` WRITE;
+/*!40000 ALTER TABLE `alumno` DISABLE KEYS */;
+INSERT INTO `alumno` VALUES (31,'Diego Larenas','dlarenas','1',4,2012,'Dlarenas@inacapmail.cl'),(32,'Jose Allende','jallende','N03VseCGJrWP',4,2012,'Jallende@inacapmail.cl'),(33,'Diego Pozo','dpozo','SMYso14EgZw5',4,2012,'Dpozo@inacapmail.cl'),(34,'Alejandra Ahumada','aahumada','dQIY5cFulKy1',4,2012,'Aahumada@inacapmail.cl'),(35,'Maria Toro','mtoro','Z3ijAePVAhuD',4,2012,'Mtoro@inacapmail.cl'),(36,'Marcela Rodriguez','mrodriguez','7I9LqqaXsPe4',4,2012,'Mrodriguez@inacapmail.cl'),(37,'Marco Osorio','mosorio','wisHC4pCrEeg',4,2012,'Mosorio@inacapmail.cl'),(38,'Mariela Saez','msaez','VCOfB7twdlHf',4,2012,'Msaez@inacapmail.cl'),(39,'Renato Caro','rcaro','kOHaCZstVdTi',4,2012,'Rcaro@inacapmail.cl'),(40,'Cristian Valdebenito','cvaldebenito','oMeSw5JHBYeU',4,2012,'Cvaldebenito@inacapmail.cl'),(41,'Marybel Escobar','mescobar','YG14oWGxmgQg',5,2012,'Mescobar@inacapmail.cl'),(42,'Jose Perez','jperez','cp2NYY7EoGNg',5,2012,'Jperez@inacapmail.cl'),(43,'Juan Larenas','jlarenas','SBdy9HKQmvW1',5,2012,'Jlarenas@inacapmail.cl'),(44,'Marisela Santiba','msantiba','VpeGM6j3Wn3F',5,2012,'Msantibaez@inacapmail.cl'),(45,'Victor Cavieres','vcavieres','nbdKwE6n0Yey',5,2012,'Vcavieres@inacapmail.cl'),(46,'Jonathan Larenas','jlarenas2','ZCCXNL8j7PGq',5,2012,'Jlarenas@inacapmail.cl'),(47,'Nicole Gaete','ngaete','l70TdlhG3cJV',5,2012,'Ngaete@inacapmail.cl'),(48,'Vicente Diaz','vdiaz','ZIxgoNdescop',5,2012,'VDiaz@inacapmail.cl'),(49,'Aida Valenzuela ','avalenzuela','YJmYOjENTkTB',5,2012,'Avalenzuela@inacapmail.cl'),(50,'Daniela Garrido ','dgarrido','7mDVLM3SqsGy',5,2012,'Dgarrido@inacapmail.cl'),(51,'Fabiola Ampuero ','fampuero','bdCTKehNxbtr',6,2012,'Fampuero@inacapmail.cl'),(52,'Sebastian Gonzalez','sgonzalez','Q99EcpG69YyV',6,2012,'Sgonzalez@inacapmail.cl'),(53,'Gonzalo Gutierrez','ggutierrez','OjwmX4oZG0cm',6,2012,'Ggutierrez@inacapmail.cl'),(54,'Gonzalo Vial','gvial','wnU5k9XFy5c1',6,2012,'Gvial@inacapmail.cl'),(55,'Francisco Sanda','fsanda','LEyO2HcCsA4W',6,2012,'Fsandaa@inacapmail.cl'),(56,'Karina Bravo','kbravo','135EwHDevyvJ',6,2012,'Kbravo@inacapmail.cl'),(57,'Felipe Acu','facu','kkJcOh7q5K1H',6,2012,'Facua@inacapmail.cl'),(58,'Hernan Olave','holave','21WrD7mDCySb',6,2012,'Holave@inacapmail.cl'),(59,'Natalia Flores','nflores','k2WRLQAWx4ke',6,2012,'Nflores@inacapmail.cl'),(60,'Julia Osses','josses','MtBR9l7ZSBSD',6,2012,'Josses@inacapmail.cl');
+/*!40000 ALTER TABLE `alumno` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `desvinculacion_director`
+--
+
+DROP TABLE IF EXISTS `desvinculacion_director`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `desvinculacion_director` (
+  `cod_des` int(11) NOT NULL AUTO_INCREMENT,
+  `cod_dir` int(11) DEFAULT NULL,
+  `cau_des` varchar(300) DEFAULT NULL,
+  `fec_des` datetime DEFAULT NULL,
+  PRIMARY KEY (`cod_des`),
+  KEY `cod_dir` (`cod_dir`),
+  CONSTRAINT `desvinculacion_director_ibfk_1` FOREIGN KEY (`cod_dir`) REFERENCES `director` (`cod_dir`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `desvinculacion_director`
+--
+
+LOCK TABLES `desvinculacion_director` WRITE;
+/*!40000 ALTER TABLE `desvinculacion_director` DISABLE KEYS */;
+INSERT INTO `desvinculacion_director` VALUES (1,61,'Lo hechamos por malo!','2012-06-15 12:16:13');
+/*!40000 ALTER TABLE `desvinculacion_director` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `desvinculacion_profesor`
+--
+
+DROP TABLE IF EXISTS `desvinculacion_profesor`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `desvinculacion_profesor` (
+  `cod_des` int(11) NOT NULL AUTO_INCREMENT,
+  `cod_pro` int(11) DEFAULT NULL,
+  `cau_des` varchar(300) DEFAULT NULL,
+  `fec_des` datetime DEFAULT NULL,
+  `res_des` int(11) DEFAULT NULL,
+  PRIMARY KEY (`cod_des`),
+  KEY `cod_pro` (`cod_pro`),
+  KEY `res_des` (`res_des`),
+  CONSTRAINT `desvinculacion_profesor_ibfk_1` FOREIGN KEY (`cod_pro`) REFERENCES `profesor` (`cod_pro`),
+  CONSTRAINT `desvinculacion_profesor_ibfk_2` FOREIGN KEY (`res_des`) REFERENCES `director` (`cod_dir`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `desvinculacion_profesor`
+--
+
+LOCK TABLES `desvinculacion_profesor` WRITE;
+/*!40000 ALTER TABLE `desvinculacion_profesor` DISABLE KEYS */;
+INSERT INTO `desvinculacion_profesor` VALUES (1,12,'Se va a mexico a otro trabajo','2012-06-14 23:10:18',68);
+/*!40000 ALTER TABLE `desvinculacion_profesor` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `director`
+--
+
+DROP TABLE IF EXISTS `director`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `director` (
+  `cod_dir` int(11) NOT NULL AUTO_INCREMENT,
+  `nom_dir` varchar(50) DEFAULT NULL,
+  `usu_dir` varchar(50) DEFAULT NULL,
+  `pas_dir` varchar(12) DEFAULT NULL,
+  `cod_sed` int(11) DEFAULT NULL,
+  `ema_dir` varchar(80) DEFAULT NULL,
+  `est_dir` varchar(15) DEFAULT NULL,
+  PRIMARY KEY (`cod_dir`),
+  KEY `cod_sed` (`cod_sed`),
+  CONSTRAINT `director_ibfk_1` FOREIGN KEY (`cod_sed`) REFERENCES `sede` (`cod_sed`)
+) ENGINE=InnoDB AUTO_INCREMENT=76 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `director`
+--
+
+LOCK TABLES `director` WRITE;
+/*!40000 ALTER TABLE `director` DISABLE KEYS */;
+INSERT INTO `director` VALUES (61,'Ricardo Merino','rmerino','ETKnkHRPNCCe',26,'rmerino@inacapmail.cl','no-vigente'),(62,'Augusto Riquelme','ariquelme','1gU2KLyo37M1',27,'ariquelme@inacapmail.cl','vigente'),(63,'Francisco Rojas','frojas','mGKKhOscHk0x',29,'frojas@inacapmail.cl','vigente'),(64,'Raul Hermosilla','rhermosilla','my0Ym5hZYMCk',30,'rhermosilla@inacapmail.cl','vigente'),(65,'Roberto Rivera','rrivera','vLW95iRPMRTb',31,'rrivera@inacapmail.cl','vigente'),(66,'Juan Pablo Naviera','jnaviera','uoMxWwyptEsD',32,'jnaviera@inacapmail.cl','vigente'),(67,'Pablo Galdames','pgaldames','0onqBDpoLEcC',38,'pgaldames@inacapmail.cl','vigente'),(68,'Pedro Gonzalez','pgonzalez','g5lUlXyn8aK5',39,'pgonzalez@inacapmail.cl','vigente'),(69,'Ivan Moreira','imoreira','IHexRhnN4p06',41,'imoreira@inacapmail.cl','vigente'),(70,'Carlos Parra','cparra','pdojXHsM1HGT',44,'cparra@inacapmail.cl','vigente'),(71,'Juan Rocha','jrocha','RW9DKdU6HR99',45,'jrocha@inacapmail.cl','vigente'),(72,'Eduardo Navarro','enavarro','RKXwpts8haib',46,'enavarro@inacapmail.cl','vigente'),(73,'Claudio Rivadeneira','crivadeneria','ZBai2ywX7YP0',48,'crivadeneria@inacapmail.cl','vigente'),(74,'Gustavo Catalan','gcatalan','XtminZCO2n8Z',49,'gcatalan@inacapmail.cl','vigente'),(75,'Mauricio Isla','misla','3IXiWFJ4WUKA',50,'misla@inacapmail.cl','vigente');
+/*!40000 ALTER TABLE `director` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `ejercicio_alumno`
+--
+
+DROP TABLE IF EXISTS `ejercicio_alumno`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `ejercicio_alumno` (
+  `cod_eje` int(11) NOT NULL AUTO_INCREMENT,
+  `cod_alu` int(11) DEFAULT NULL,
+  `eje_alu` longblob,
+  `eje_pro` int(11) DEFAULT NULL,
+  `fec_eje` datetime DEFAULT NULL,
+  PRIMARY KEY (`cod_eje`),
+  KEY `cod_alu` (`cod_alu`),
+  KEY `eje_pro` (`eje_pro`),
+  CONSTRAINT `ejercicio_alumno_ibfk_1` FOREIGN KEY (`cod_alu`) REFERENCES `alumno` (`cod_alu`),
+  CONSTRAINT `ejercicio_alumno_ibfk_2` FOREIGN KEY (`eje_pro`) REFERENCES `ejercicio_profesor` (`cod_eje`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `ejercicio_alumno`
+--
+
+LOCK TABLES `ejercicio_alumno` WRITE;
+/*!40000 ALTER TABLE `ejercicio_alumno` DISABLE KEYS */;
+INSERT INTO `ejercicio_alumno` VALUES (1,31,'/*\nNuevo Ejercicio\n\n*/\r\n',2,'2012-06-20 12:37:42');
+/*!40000 ALTER TABLE `ejercicio_alumno` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `ejercicio_profesor`
+--
+
+DROP TABLE IF EXISTS `ejercicio_profesor`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `ejercicio_profesor` (
+  `cod_eje` int(11) NOT NULL AUTO_INCREMENT,
+  `cod_sec` int(11) DEFAULT NULL,
+  `nom_eje` varchar(150) DEFAULT NULL,
+  `eje_pro` longblob,
+  `fec_eje` datetime DEFAULT NULL,
+  `fec_cre` datetime DEFAULT NULL,
+  `tod_sec` varchar(2) DEFAULT NULL,
+  `des_eje` varchar(140) DEFAULT NULL,
+  `cod_pro` int(11) DEFAULT NULL,
+  PRIMARY KEY (`cod_eje`),
+  KEY `cod_sec` (`cod_sec`),
+  KEY `cod_pro` (`cod_pro`),
+  CONSTRAINT `ejercicio_profesor_ibfk_1` FOREIGN KEY (`cod_sec`) REFERENCES `seccion` (`cod_sec`),
+  CONSTRAINT `ejercicio_profesor_ibfk_2` FOREIGN KEY (`cod_pro`) REFERENCES `profesor` (`cod_pro`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `ejercicio_profesor`
+--
+
+LOCK TABLES `ejercicio_profesor` WRITE;
+/*!40000 ALTER TABLE `ejercicio_profesor` DISABLE KEYS */;
+INSERT INTO `ejercicio_profesor` VALUES (1,4,'Ejercicio 1','ejercicio\r\n','2012-06-30 21:00:00','2012-06-17 20:13:13','no','Ejercicio tipo prueba 1',10),(2,4,'Nuevo Ejercicio','Nuevo Ejercicio\r\n','2012-06-30 00:00:00','2012-06-17 21:17:53','no','Hernan',10);
+/*!40000 ALTER TABLE `ejercicio_profesor` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `mensaje`
+--
+
+DROP TABLE IF EXISTS `mensaje`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `mensaje` (
+  `cod_men` int(11) NOT NULL AUTO_INCREMENT,
+  `asu_men` varchar(50) DEFAULT NULL,
+  `cod_pro` int(11) DEFAULT NULL,
+  `cod_alu` int(11) DEFAULT NULL,
+  `fec_men` datetime DEFAULT NULL,
+  `men_men` varchar(300) DEFAULT NULL,
+  PRIMARY KEY (`cod_men`),
+  KEY `cod_pro` (`cod_pro`),
+  KEY `cod_alu` (`cod_alu`),
+  CONSTRAINT `mensaje_ibfk_1` FOREIGN KEY (`cod_pro`) REFERENCES `profesor` (`cod_pro`),
+  CONSTRAINT `mensaje_ibfk_2` FOREIGN KEY (`cod_alu`) REFERENCES `alumno` (`cod_alu`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `mensaje`
+--
+
+LOCK TABLES `mensaje` WRITE;
+/*!40000 ALTER TABLE `mensaje` DISABLE KEYS */;
+INSERT INTO `mensaje` VALUES (1,'Ejercicio Recibido',10,31,'2012-06-20 12:38:10','El ejercicio ha sido recibido con éxito');
+/*!40000 ALTER TABLE `mensaje` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `mensaje_seccion`
+--
+
+DROP TABLE IF EXISTS `mensaje_seccion`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `mensaje_seccion` (
+  `cod_men` int(11) NOT NULL AUTO_INCREMENT,
+  `asu_men` varchar(50) DEFAULT NULL,
+  `cod_pro` int(11) DEFAULT NULL,
+  `cod_sec` int(11) DEFAULT NULL,
+  `fec_men` datetime DEFAULT NULL,
+  `men_men` varchar(300) DEFAULT NULL,
+  PRIMARY KEY (`cod_men`),
+  KEY `cod_pro` (`cod_pro`),
+  KEY `cod_sec` (`cod_sec`),
+  CONSTRAINT `mensaje_seccion_ibfk_1` FOREIGN KEY (`cod_pro`) REFERENCES `profesor` (`cod_pro`),
+  CONSTRAINT `mensaje_seccion_ibfk_2` FOREIGN KEY (`cod_sec`) REFERENCES `seccion` (`cod_sec`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `mensaje_seccion`
+--
+
+LOCK TABLES `mensaje_seccion` WRITE;
+/*!40000 ALTER TABLE `mensaje_seccion` DISABLE KEYS */;
+/*!40000 ALTER TABLE `mensaje_seccion` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `profesor`
+--
+
+DROP TABLE IF EXISTS `profesor`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `profesor` (
+  `cod_pro` int(11) NOT NULL AUTO_INCREMENT,
+  `nom_pro` varchar(50) DEFAULT NULL,
+  `usu_pro` varchar(50) DEFAULT NULL,
+  `pas_pro` varchar(12) DEFAULT NULL,
+  `cod_dir` int(11) DEFAULT NULL,
+  `ema_pro` varchar(80) DEFAULT NULL,
+  `est_pro` varchar(15) DEFAULT NULL,
+  PRIMARY KEY (`cod_pro`),
+  KEY `cod_dir` (`cod_dir`),
+  CONSTRAINT `profesor_ibfk_1` FOREIGN KEY (`cod_dir`) REFERENCES `director` (`cod_dir`)
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `profesor`
+--
+
+LOCK TABLES `profesor` WRITE;
+/*!40000 ALTER TABLE `profesor` DISABLE KEYS */;
+INSERT INTO `profesor` VALUES (9,'Sin Profesor',NULL,NULL,68,NULL,'vigente'),(10,'Esteban Valenzuela','evalenzuela','1',68,'mpino@inacapmail.cl','vigente'),(11,'Cesar Arce','carce','NEMDiZtbj7lQ',68,'null','vigente'),(12,'Macarena Pino','mpino','Hv1s5Jfg5Vri',68,'null','no-vigente');
+/*!40000 ALTER TABLE `profesor` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `seccion`
+--
+
+DROP TABLE IF EXISTS `seccion`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `seccion` (
+  `cod_sec` int(11) NOT NULL AUTO_INCREMENT,
+  `num_sec` int(11) DEFAULT NULL,
+  `cod_pro` int(11) DEFAULT NULL,
+  PRIMARY KEY (`cod_sec`),
+  KEY `cod_pro` (`cod_pro`),
+  CONSTRAINT `seccion_ibfk_1` FOREIGN KEY (`cod_pro`) REFERENCES `profesor` (`cod_pro`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `seccion`
+--
+
+LOCK TABLES `seccion` WRITE;
+/*!40000 ALTER TABLE `seccion` DISABLE KEYS */;
+INSERT INTO `seccion` VALUES (4,201,10),(5,211,11),(6,221,9);
+/*!40000 ALTER TABLE `seccion` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `sede`
+--
+
+DROP TABLE IF EXISTS `sede`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `sede` (
+  `cod_sed` int(11) NOT NULL AUTO_INCREMENT,
+  `nom_sed` varchar(30) DEFAULT NULL,
+  PRIMARY KEY (`cod_sed`)
+) ENGINE=InnoDB AUTO_INCREMENT=51 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `sede`
+--
+
+LOCK TABLES `sede` WRITE;
+/*!40000 ALTER TABLE `sede` DISABLE KEYS */;
+INSERT INTO `sede` VALUES (26,'Arica'),(27,'Iquique'),(28,'Calama'),(29,'Antofagasta'),(30,'Copiapo'),(31,'La Serena'),(32,'Valparaiso'),(33,'Apoquindo'),(34,'Maipu'),(35,'Renca'),(36,'Perez Rosales'),(37,'Santiago centro'),(38,'Santiago sur'),(39,'Rancagua'),(40,'Curico'),(41,'Talca'),(42,'Chillan'),(43,'Concepcion-Talcahuano'),(44,'Los Angeles'),(45,'Temuco'),(46,'Valdivia'),(47,'Osorno'),(48,'Puerto Montt'),(49,'Coyhaique'),(50,'Punta Arenas');
+/*!40000 ALTER TABLE `sede` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `tiempo_chat`
+--
+
+DROP TABLE IF EXISTS `tiempo_chat`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `tiempo_chat` (
+  `cod_tie` int(11) NOT NULL AUTO_INCREMENT,
+  `cod_alu` int(11) DEFAULT NULL,
+  `pri_con` datetime DEFAULT NULL,
+  `ult_con` datetime DEFAULT NULL,
+  `dur_ult` mediumtext,
+  `dur_tot` mediumtext,
+  PRIMARY KEY (`cod_tie`),
+  KEY `cod_alu` (`cod_alu`),
+  CONSTRAINT `tiempo_chat_ibfk_1` FOREIGN KEY (`cod_alu`) REFERENCES `alumno` (`cod_alu`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tiempo_chat`
+--
+
+LOCK TABLES `tiempo_chat` WRITE;
+/*!40000 ALTER TABLE `tiempo_chat` DISABLE KEYS */;
+INSERT INTO `tiempo_chat` VALUES (5,31,'2012-06-17 14:54:38','2012-06-17 23:22:49','73937','302606');
+/*!40000 ALTER TABLE `tiempo_chat` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2012-06-21 16:04:32

@@ -1,0 +1,436 @@
+-- MySQL dump 10.13  Distrib 5.5.21, for Win32 (x86)
+--
+-- Host: localhost    Database: jedic
+-- ------------------------------------------------------
+-- Server version	5.5.21
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `administrador`
+--
+
+DROP TABLE IF EXISTS `administrador`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `administrador` (
+  `cod_adm` bigint(20) NOT NULL AUTO_INCREMENT,
+  `nom_adm` varchar(50) DEFAULT NULL,
+  `usu_adm` varchar(50) DEFAULT NULL,
+  `pas_adm` varchar(12) DEFAULT NULL,
+  `ema_adm` varchar(80) DEFAULT NULL,
+  PRIMARY KEY (`cod_adm`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `administrador`
+--
+
+LOCK TABLES `administrador` WRITE;
+/*!40000 ALTER TABLE `administrador` DISABLE KEYS */;
+INSERT INTO `administrador` VALUES (1,'Patricio Pérez Pinto','pperez','07091988','patodeath@gmail.com');
+/*!40000 ALTER TABLE `administrador` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `alumno`
+--
+
+DROP TABLE IF EXISTS `alumno`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `alumno` (
+  `cod_alu` bigint(20) NOT NULL AUTO_INCREMENT,
+  `nom_alu` varchar(50) DEFAULT NULL,
+  `usu_alu` varchar(50) DEFAULT NULL,
+  `pas_alu` varchar(12) DEFAULT NULL,
+  `cod_sec` bigint(20) DEFAULT NULL,
+  `ano_alu` int(11) DEFAULT NULL,
+  `ema_alu` varchar(80) DEFAULT NULL,
+  PRIMARY KEY (`cod_alu`),
+  KEY `cod_sec` (`cod_sec`),
+  CONSTRAINT `alumno_ibfk_1` FOREIGN KEY (`cod_sec`) REFERENCES `seccion` (`cod_sec`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `alumno`
+--
+
+LOCK TABLES `alumno` WRITE;
+/*!40000 ALTER TABLE `alumno` DISABLE KEYS */;
+/*!40000 ALTER TABLE `alumno` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `desvinculacion_director`
+--
+
+DROP TABLE IF EXISTS `desvinculacion_director`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `desvinculacion_director` (
+  `cod_des` bigint(20) NOT NULL AUTO_INCREMENT,
+  `cod_adm` bigint(20) DEFAULT NULL,
+  `cod_dir` bigint(20) DEFAULT NULL,
+  `cau_des` varchar(300) DEFAULT NULL,
+  `fec_des` datetime DEFAULT NULL,
+  PRIMARY KEY (`cod_des`),
+  KEY `cod_adm` (`cod_adm`),
+  KEY `cod_dir` (`cod_dir`),
+  CONSTRAINT `desvinculacion_director_ibfk_1` FOREIGN KEY (`cod_adm`) REFERENCES `administrador` (`cod_adm`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `desvinculacion_director_ibfk_2` FOREIGN KEY (`cod_dir`) REFERENCES `director` (`cod_dir`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `desvinculacion_director`
+--
+
+LOCK TABLES `desvinculacion_director` WRITE;
+/*!40000 ALTER TABLE `desvinculacion_director` DISABLE KEYS */;
+/*!40000 ALTER TABLE `desvinculacion_director` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `desvinculacion_profesor`
+--
+
+DROP TABLE IF EXISTS `desvinculacion_profesor`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `desvinculacion_profesor` (
+  `cod_des` bigint(20) NOT NULL AUTO_INCREMENT,
+  `cod_pro` bigint(20) DEFAULT NULL,
+  `cau_des` varchar(300) DEFAULT NULL,
+  `fec_des` datetime DEFAULT NULL,
+  `res_des` bigint(20) DEFAULT NULL,
+  PRIMARY KEY (`cod_des`),
+  KEY `cod_pro` (`cod_pro`),
+  KEY `res_des` (`res_des`),
+  CONSTRAINT `desvinculacion_profesor_ibfk_1` FOREIGN KEY (`cod_pro`) REFERENCES `profesor` (`cod_pro`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `desvinculacion_profesor_ibfk_2` FOREIGN KEY (`res_des`) REFERENCES `director` (`cod_dir`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `desvinculacion_profesor`
+--
+
+LOCK TABLES `desvinculacion_profesor` WRITE;
+/*!40000 ALTER TABLE `desvinculacion_profesor` DISABLE KEYS */;
+/*!40000 ALTER TABLE `desvinculacion_profesor` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `director`
+--
+
+DROP TABLE IF EXISTS `director`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `director` (
+  `cod_dir` bigint(20) NOT NULL AUTO_INCREMENT,
+  `nom_dir` varchar(50) DEFAULT NULL,
+  `usu_dir` varchar(50) DEFAULT NULL,
+  `pas_dir` varchar(12) DEFAULT NULL,
+  `cod_sed` bigint(20) DEFAULT NULL,
+  `ema_dir` varchar(80) DEFAULT NULL,
+  `est_dir` varchar(15) DEFAULT NULL,
+  PRIMARY KEY (`cod_dir`),
+  KEY `cod_sed` (`cod_sed`),
+  CONSTRAINT `director_ibfk_1` FOREIGN KEY (`cod_sed`) REFERENCES `sede` (`cod_sed`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `director`
+--
+
+LOCK TABLES `director` WRITE;
+/*!40000 ALTER TABLE `director` DISABLE KEYS */;
+/*!40000 ALTER TABLE `director` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `ejercicio_alumno`
+--
+
+DROP TABLE IF EXISTS `ejercicio_alumno`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `ejercicio_alumno` (
+  `cod_eje` bigint(20) NOT NULL AUTO_INCREMENT,
+  `cod_alu` bigint(20) DEFAULT NULL,
+  `eje_alu` longblob,
+  `eje_pro` bigint(20) DEFAULT NULL,
+  `fec_eje` datetime DEFAULT NULL,
+  PRIMARY KEY (`cod_eje`),
+  KEY `cod_alu` (`cod_alu`),
+  KEY `eje_pro` (`eje_pro`),
+  CONSTRAINT `ejercicio_alumno_ibfk_1` FOREIGN KEY (`cod_alu`) REFERENCES `alumno` (`cod_alu`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `ejercicio_alumno_ibfk_2` FOREIGN KEY (`eje_pro`) REFERENCES `ejercicio_profesor` (`cod_eje`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `ejercicio_alumno`
+--
+
+LOCK TABLES `ejercicio_alumno` WRITE;
+/*!40000 ALTER TABLE `ejercicio_alumno` DISABLE KEYS */;
+/*!40000 ALTER TABLE `ejercicio_alumno` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `ejercicio_profesor`
+--
+
+DROP TABLE IF EXISTS `ejercicio_profesor`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `ejercicio_profesor` (
+  `cod_eje` bigint(20) NOT NULL AUTO_INCREMENT,
+  `cod_sec` bigint(20) DEFAULT NULL,
+  `nom_eje` varchar(150) DEFAULT NULL,
+  `eje_pro` longblob,
+  `fec_eje` datetime DEFAULT NULL,
+  `fec_cre` datetime DEFAULT NULL,
+  `tod_sec` varchar(2) DEFAULT NULL,
+  `des_eje` varchar(140) DEFAULT NULL,
+  `cod_pro` bigint(20) DEFAULT NULL,
+  PRIMARY KEY (`cod_eje`),
+  KEY `cod_sec` (`cod_sec`),
+  KEY `cod_pro` (`cod_pro`),
+  CONSTRAINT `ejercicio_profesor_ibfk_1` FOREIGN KEY (`cod_sec`) REFERENCES `seccion` (`cod_sec`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `ejercicio_profesor_ibfk_2` FOREIGN KEY (`cod_pro`) REFERENCES `profesor` (`cod_pro`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=270 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `ejercicio_profesor`
+--
+
+LOCK TABLES `ejercicio_profesor` WRITE;
+/*!40000 ALTER TABLE `ejercicio_profesor` DISABLE KEYS */;
+/*!40000 ALTER TABLE `ejercicio_profesor` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `historial`
+--
+
+DROP TABLE IF EXISTS `historial`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `historial` (
+  `cod_his` bigint(20) NOT NULL AUTO_INCREMENT,
+  `nom_tab` varchar(15) DEFAULT NULL,
+  `cod_per` bigint(20) DEFAULT NULL,
+  `det_his` varchar(400) DEFAULT NULL,
+  `fec_his` datetime DEFAULT NULL,
+  PRIMARY KEY (`cod_his`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `historial`
+--
+
+LOCK TABLES `historial` WRITE;
+/*!40000 ALTER TABLE `historial` DISABLE KEYS */;
+INSERT INTO `historial` VALUES (1,'administrador',NULL,'Se inició la ejecución del sistema JEDIC Administrador','2012-12-05 19:16:58'),(2,'administrador',1,'Inició sesión','2012-12-05 19:17:05');
+/*!40000 ALTER TABLE `historial` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `mensaje`
+--
+
+DROP TABLE IF EXISTS `mensaje`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `mensaje` (
+  `cod_men` bigint(20) NOT NULL AUTO_INCREMENT,
+  `asu_men` varchar(50) DEFAULT NULL,
+  `cod_pro` bigint(20) DEFAULT NULL,
+  `cod_alu` bigint(20) DEFAULT NULL,
+  `fec_men` datetime DEFAULT NULL,
+  `men_men` varchar(300) DEFAULT NULL,
+  PRIMARY KEY (`cod_men`),
+  KEY `cod_pro` (`cod_pro`),
+  KEY `cod_alu` (`cod_alu`),
+  CONSTRAINT `mensaje_ibfk_1` FOREIGN KEY (`cod_pro`) REFERENCES `profesor` (`cod_pro`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `mensaje_ibfk_2` FOREIGN KEY (`cod_alu`) REFERENCES `alumno` (`cod_alu`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `mensaje`
+--
+
+LOCK TABLES `mensaje` WRITE;
+/*!40000 ALTER TABLE `mensaje` DISABLE KEYS */;
+/*!40000 ALTER TABLE `mensaje` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `mensaje_seccion`
+--
+
+DROP TABLE IF EXISTS `mensaje_seccion`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `mensaje_seccion` (
+  `cod_men` bigint(20) NOT NULL AUTO_INCREMENT,
+  `asu_men` varchar(50) DEFAULT NULL,
+  `cod_pro` bigint(20) DEFAULT NULL,
+  `cod_sec` bigint(20) DEFAULT NULL,
+  `fec_men` datetime DEFAULT NULL,
+  `men_men` varchar(300) DEFAULT NULL,
+  PRIMARY KEY (`cod_men`),
+  KEY `cod_pro` (`cod_pro`),
+  KEY `cod_sec` (`cod_sec`),
+  CONSTRAINT `mensaje_seccion_ibfk_1` FOREIGN KEY (`cod_pro`) REFERENCES `profesor` (`cod_pro`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `mensaje_seccion_ibfk_2` FOREIGN KEY (`cod_sec`) REFERENCES `seccion` (`cod_sec`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `mensaje_seccion`
+--
+
+LOCK TABLES `mensaje_seccion` WRITE;
+/*!40000 ALTER TABLE `mensaje_seccion` DISABLE KEYS */;
+/*!40000 ALTER TABLE `mensaje_seccion` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `profesor`
+--
+
+DROP TABLE IF EXISTS `profesor`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `profesor` (
+  `cod_pro` bigint(20) NOT NULL AUTO_INCREMENT,
+  `nom_pro` varchar(50) DEFAULT NULL,
+  `usu_pro` varchar(50) DEFAULT NULL,
+  `pas_pro` varchar(12) DEFAULT NULL,
+  `cod_dir` bigint(20) DEFAULT NULL,
+  `ema_pro` varchar(80) DEFAULT NULL,
+  `est_pro` varchar(15) DEFAULT NULL,
+  PRIMARY KEY (`cod_pro`),
+  KEY `cod_dir` (`cod_dir`),
+  CONSTRAINT `profesor_ibfk_1` FOREIGN KEY (`cod_dir`) REFERENCES `director` (`cod_dir`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `profesor`
+--
+
+LOCK TABLES `profesor` WRITE;
+/*!40000 ALTER TABLE `profesor` DISABLE KEYS */;
+/*!40000 ALTER TABLE `profesor` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `seccion`
+--
+
+DROP TABLE IF EXISTS `seccion`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `seccion` (
+  `cod_sec` bigint(20) NOT NULL AUTO_INCREMENT,
+  `num_sec` int(11) DEFAULT NULL,
+  `cod_pro` bigint(20) DEFAULT NULL,
+  PRIMARY KEY (`cod_sec`),
+  KEY `cod_pro` (`cod_pro`),
+  CONSTRAINT `seccion_ibfk_1` FOREIGN KEY (`cod_pro`) REFERENCES `profesor` (`cod_pro`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `seccion`
+--
+
+LOCK TABLES `seccion` WRITE;
+/*!40000 ALTER TABLE `seccion` DISABLE KEYS */;
+/*!40000 ALTER TABLE `seccion` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `sede`
+--
+
+DROP TABLE IF EXISTS `sede`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `sede` (
+  `cod_sed` bigint(20) NOT NULL AUTO_INCREMENT,
+  `nom_sed` varchar(30) DEFAULT NULL,
+  PRIMARY KEY (`cod_sed`)
+) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `sede`
+--
+
+LOCK TABLES `sede` WRITE;
+/*!40000 ALTER TABLE `sede` DISABLE KEYS */;
+INSERT INTO `sede` VALUES (1,'Arica'),(2,'Iquique'),(3,'Calama'),(4,'Antofagasta'),(5,'Copiapo'),(6,'La Serena'),(7,'Valparaiso'),(8,'Apoquindo'),(9,'Maipu'),(10,'Renca'),(11,'Perez Rosales'),(12,'Santiago centro'),(13,'Santiago sur'),(14,'Rancagua'),(15,'Curico'),(16,'Talca'),(17,'Chillan'),(18,'Concepcion-Talcahuano'),(19,'Los Angeles'),(20,'Temuco'),(21,'Valdivia'),(22,'Osorno'),(23,'Puerto Montt'),(24,'Coyhaique'),(25,'Punta Arenas'),(26,'Concepcion');
+/*!40000 ALTER TABLE `sede` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `tiempo_chat`
+--
+
+DROP TABLE IF EXISTS `tiempo_chat`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `tiempo_chat` (
+  `cod_tie` bigint(20) NOT NULL AUTO_INCREMENT,
+  `cod_alu` bigint(20) DEFAULT NULL,
+  `pri_con` datetime DEFAULT NULL,
+  `ult_con` datetime DEFAULT NULL,
+  `dur_ult` mediumtext,
+  `dur_tot` mediumtext,
+  PRIMARY KEY (`cod_tie`),
+  KEY `cod_alu` (`cod_alu`),
+  CONSTRAINT `tiempo_chat_ibfk_1` FOREIGN KEY (`cod_alu`) REFERENCES `alumno` (`cod_alu`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tiempo_chat`
+--
+
+LOCK TABLES `tiempo_chat` WRITE;
+/*!40000 ALTER TABLE `tiempo_chat` DISABLE KEYS */;
+/*!40000 ALTER TABLE `tiempo_chat` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2012-12-05 19:17:14

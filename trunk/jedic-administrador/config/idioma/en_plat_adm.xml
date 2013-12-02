@@ -1,0 +1,61 @@
+<?xml version='1.0' standalone='yes' ?>
+<config idioma="English">
+	<!-- TITULOS -->
+	<titulo id="0" value="Create headquarter / director" title="CREAR_SEDE"/>
+	<titulo id="1" value="Headquarter name" title="TITULO_TABLA_SEDE"/>
+	<titulo id="2" value="Create Director" title="CREAR_DIRECTOR"/>
+	<titulo id="3" value="Director" title="DIRECTOR"/>
+	<titulo id="4" value="Headquarter" title="SEDE"/>
+	<titulo id="5" value="Modify Director" title="MODIFICAR_DIRECTOR"/>
+	<titulo id="6" value="Reports" title="REPORTES"/>
+	<titulo id="7" value="Tools" title="HERRAMIENTAS"/>
+	<titulo id="8" value="Valid Directors" title="DIRECTORES_VIGENTES"/>
+	<titulo id="9" value="Not Valid Directors" title="DIRECTORES_NO_VIGENTES"/>
+	<!-- COMPONENTES -->
+	<componente id="10" value="Name of Headquarter" title="NOMBRE_SEDE"/>
+	<componente id="11" value="List of Headquarters" title="LISTADO_SEDES"/>
+	<componente id="12" value="Director name" title="NOMBRE_DIRECTOR"/>
+	<componente id="13" value="User" title="USUARIO"/>
+	<componente id="14" value="Pass" title="CONTRASENA"/>
+	<componente id="15" value="E-mail" title="MAIL"/>
+	<componente id="16" value="List of Career Director" title="LISTADO_DIR_CARR"/>
+	<componente id="17" value="Replace Director" title="REEMPLAZAR_DIRECTOR"/>
+	<componente id="18" value="Headquarter" title="SEDES"/>
+	<componente id="19" value="Headquarters that uses more the app" title="SEDES_UTIL_MAS_APLI"/>
+	<componente id="20" value="Start date" title="FECHA_INICIO"/>
+	<componente id="21" value="End date" title="FECHA_TERMINO"/>
+	<componente id="22" value="Backup" title="RESPALDO"/>
+	<componente id="23" value="BD Backup " title="RESPALDAR_BD"/>
+	<componente id="24" value="Restore" title="RESTAURAR"/>
+	<componente id="25" value="Restore BD to specific point" title="RESTAURAR_BD_PUNTO_ESPECIFICO"/>
+	<componente id="26" value="Restore from..." title="RESTAURAR_DESDE"/>
+	<componente id="27" value="Backup" title="RESPALDOS"/>
+	<componente id="28" value="Restore selected backup" title="RESTAURAR_RESPALDO_SELECCIONADO"/>
+	<componente id="29" value="Help" title="AYUDA"/>
+	<componente id="30" value="Contents Help" title="AYUDA_DE_CONTENIDOS"/>
+	<!-- MENSAJES -->
+	<mensaje id="31" value="Headquearter added succesfully" title="SEDE_AGREGADA_EXITOSAMENTE"/>
+	<mensaje id="32" value="Write a Headquarter correctly without numbers and symbols" title="ESCRIBA_UNA_SEDE_CORRECT"/>
+	<mensaje id="33" value="Write a headquarter" title="ESCRIBA_UNA_SEDE"/>
+	<mensaje id="34" value="Headquarter and entered" title="SEDE_YA_INGRESADA"/>
+	<mensaje id="35" value="Director successfully created" title="DIR_CRE_EXITO"/>
+	<mensaje id="36" value="The user is already in the database. Is renamed to: " title="EL_USU_YA_SE_ENC_EN_LA_BD"/>
+	<mensaje id="37" value="Incorrect name of director" title="NOM_DIR_INCORR"/>
+	<mensaje id="38" value="Incorrect E-mail" title="MAIL_INCOR"/>
+	<mensaje id="39" value="No numbers or symbols are allowed" title="NO_SE_PERMITE_NUN_SIM"/>
+	<mensaje id="40" value="Missing data. review" title="FALTAN_DATOS"/>
+	<mensaje id="41" value="You must first create a headquarter" title="PRIMERO_DEBE_CREAR_SEDE"/>
+	<mensaje id="42" value="Has been appointed the Director at the headquarters: " title="SE_HA_ASIG_EL_DIR_SED"/>
+	<mensaje id="43" value="GENERATING REPORT! " title="GENERANDO_REPORTE"/>
+	<mensaje id="44" value="Backup create! " title="RESPALDO_CREADO"/>
+	<mensaje id="45" value="SUPPORTING DATA BASE" title="RESPALDANDO_BD"/>
+	<mensaje id="46" value="RESTORING DATA BASE" title="RESTAURANDO_BD"/>
+	<mensaje id="47" value="Restoration done!" title="RESTAUR_REALIZADA"/>
+	<mensaje id="48" value="Select some backup" title="SELEC_ALGUN_RESPALDO"/>
+	<mensaje id="49" value="There are no exercises in this date range" title="NO_HAY_EJER_RAN_FEC"/>
+	<mensaje id="50" value="Incorrect date range" title="RANGO_DE_FECHAS_INCORRECTO"/>
+	<idioma id="51" value="Language" title="IDIOMA"/>
+        <titulo id="52" value="Administrator Platform" title="TITULO_PRINCIPAL"/>
+        <mensaje id="53" value="Do you really want to restore the backup selected?" title="REAL_DESEA_RESTAURAR"/>
+</config>
+
