@@ -1,0 +1,16 @@
+Mis ejercicios
+Ver ejercicio seleccionado
+Actualizar listado con filtro de ejercicio
+Informaci�n del ejercicio
+Enviado a la secci�n
+Fecha de Plazo
+Fecha de creaci�n
+Enviado el dia...
+d�a de retraso
+horas de retraso
+minutos de retraso
+segundos de retraso
+no est� atrasado
+Atrasado
+Hora de Plazo
+todos los meses del a�o

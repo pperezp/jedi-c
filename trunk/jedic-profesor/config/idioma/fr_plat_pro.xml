@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<config idioma="Français">
+	<!-- TITULOS -->
+    <titulo id="0" value="Renseignements concernant l'enseignant" title="INFORMACION_PROFESOR"/>
+    <titulo id="1" value="JEDI C professeur" title="JEDI_C_PROFESOR"/>
+    <titulo id="2" value="Afficher exercices" title="VISUALIZAR_EJERCICIOS"/>
+    <titulo id="3" value="Code" title="CODIGO"/>
+    <titulo id="4" value="Étudiant" title="ALUMNO"/>
+    <titulo id="5" value="Exercer" title="EJERCICIO"/>
+    <titulo id="6" value="Rapports" title="REPORTES"/>
+    <titulo id="7" value="Erreurs de compilation" title="ERRORE_DE_COMPILACION"/>
+    <titulo id="8" value="Informations" title="INFORMACION"/>
+    <titulo id="9" value="Erreurs" title="ERRORES"/>
+	<!-- COMPONENTES -->
+    <componente id="10" value="¡Bienvenue à JEDI C!" title="BIENVENIDO"/>
+    <componente id="11" value="¡Bienvenue!. Entrez les informations requises pour commencer à apprécier JEDI C!" title="INGRESA_LA_INFORMACION_REQ"/>
+    <componente id="12" value="Utilisateur" title="USUARIO"/>
+    <componente id="13" value="Mot de passe" title="CONTRASENA"/>
+    <componente id="14" value="Mot de passe oublié" title="RECUPERAR_CONTRASENA"/>
+    <componente id="15" value="Connectez-vous" title="INGRESAR"/>
+    <componente id="16" value="Aider" title="AYUDA"/>
+    <componente id="17" value="Contenu de l'aide" title="AYUDA_DE_CONTENIDOS"/>
+    <componente id="18" value="Nouveau" title="NUEVO"/>
+    <componente id="19" value="Ouvrir un fichier" title="ABRIR"/>
+    <componente id="20" value="Changer mot de passe" title="CAMBIAR_CONTRASENA"/>
+    <componente id="21" value="Professeur" title="PROFESOR"/>
+    <componente id="22" value="Siège" title="SEDE"/>
+    <componente id="23" value="Nom" title="NOMBRE"/>
+    <componente id="24" value="Section" title="SECCION"/>
+    <componente id="25" value="Envoyer exercer" title="ENVIAR_EJERCICIO"/>
+    <componente id="26" value="Mettre à jour la liste" title="ACTUALIZAR_LISTADO"/>
+    <componente id="27" value="Revoir l'exercice" title="REVISAR_EJERCICIO"/>
+    <componente id="28" value="Date de début" title="FECHA_INICIO"/>
+    <componente id="29" value="De fin" title="FECHA_FINAL"/>
+    <componente id="30" value="Déconnexion" title="CERRAR_SESION"/>
+    <componente id="31" value="Nouveau mot de passe" title="CONTRASENA_NUEVA"/>
+    <componente id="32" value="Répétez le mot de passe" title="REPETIR_CONTRASENA"/>
+	<!-- MENSAJES -->
+    <mensaje id="33" value="Vous devez entrer le nom d'utilisateur pour récupérer votre mot de passe" title="DEBE_ESCRIBIR_NOMBRE_USUARIO_RECUPERAR_CLAVE"/>
+    <mensaje id="34" value="Apparemment pas d'une connexion Internet. Vous ne pouvez pas récupérer votre mot de passe" title="NO_POSEE_CONEXION"/>
+    <mensaje id="35" value="Échec d'ouverture de session. Vérifiez vos données" title="ERROR_VERIFIQUE_DATOS"/>
+    <mensaje id="36" value="Exercice envoyé avec succès" title="EJER_ENVIADO_CON_EXITO"/>
+    <mensaje id="37" value="Entrez un nom pour l'exercice" title="INGRESE_ALGUN_NOMBRE_AL_EJERCICIO"/>
+    <mensaje id="38" value="Il ya des sections" title="NO_EXISTEN_SECCIONES"/>
+    <mensaje id="39" value="Produire le rapport" title="GENERANDO_REPORTE"/>
+    <mensaje id="40" value="Il n'y a pas d'exercices" title="NO_HAY_EJERCICIOS"/>
+    <mensaje id="41" value="Plage de dates incorrect" title="RANGO_DE_FECHAS_INCORRECTO"/>
+    <mensaje id="42" value="Les mots de passe ne correspondent pas. S'il vous plaît vérifiez" title="LAS_CONTRASENAS_NO_COINCIDEN"/>
+    <mensaje id="43" value="VOTRE MOT DE PASSE A été changé avec succès" title="SU_CONTRASENA_SE_HA_CAMBIADO_EXITOSAMENTE"/>
+    <mensaje id="44" value="Le mot de passe doit contenir les éléments suivants:" title="LA_CONTRASENA_DEBE_CONTENER"/>
+    <mensaje id="45" value="Un minimum de 6 caractères" title="UN_MINIMO_6_CARACTERES"/>
+    <mensaje id="46" value="Une longueur maximale de 12 caractères" title="UN_LARGO_MAXIMO_12_CARACT"/>
+    <mensaje id="47" value="Nombres" title="NUMEROS"/>
+    <mensaje id="48" value="Les lettres majuscules" title="LETRAS_MAYUSCULAS"/>
+    <mensaje id="49" value="Petites lettres" title="LETRAS_MINUSCULAS"/>
+    <!-- IDIOMA -->
+    <idioma id="50" value="Langue" title="IDIOMA"/>
+    <mensaje id="51" value="Su cuenta se encuentra desactivada. Contáctese con el Jefe de Área de su sede para activarla" title="CUENTA_DESACTIVADA"/>
+    <componente id="52" value="Toutes les sections" title="TODAS_LAS_SECCIONES"/>
+    <componente id="53" value="Enregistrer le codage" title="GUARDAR_CODIFICACION"/>
+    <componente id="54" value="Ouvert à l'année" title="ABRIR_EJERCICIO"/>
+    <componente id="55" value="Format du rapport" title="FORMATO_DEL_REPORTE"/>
+    <componente id="56" value="Générer un rapport" title="GENERAR_REPORTE"/>
+    <componente id="57" value="Annuler" title="CANCELAR"/>
+    <componente id="58" value="Date" title="FECHA"/>
+    <componente id="59" value="Mis ejercicios" title="MIS_EJERCICIOS"/>
+    <componente id="60" value="Ver ejercicio seleccionado" title="VER_EJERCICIO_SELECCIONADO"/>
+    <componente id="61" value="Actualizar listado con filtro de ejercicio" title="ACTUALIZAR_LISTADO_FILTRO_EJER"/>
+    <componente id="62" value="Información del ejercicio" title="INFO_EJER"/>
+    <componente id="63" value="Enviado a la sección" title="ENVIADO_A_LA_SECCION"/>
+    <componente id="64" value="Fecha de plazo" title="FECHA_DE_PLAZO"/>
+    <componente id="65" value="Fecha de creación" title="FECHA_DE_CREACION"/>
+    <componente id="66" value="Enviado el día" title="ENVIADO_EL_DIA"/>
+    <componente id="67" value="días de retraso" title="DIAS_DE_RETRASO"/>
+    <componente id="68" value="horas de retraso" title="HORAS_DE_RETRASO"/>
+    <componente id="69" value="minutos de retraso" title="MINUTOS_DE_RETRASO"/>
+    <componente id="70" value="segundos de retraso" title="SEGUNDOS_DE_RETRASO"/>
+    <componente id="71" value="No está atrasado" title="NO_ESTA_ATRASADO"/>
+    <componente id="72" value="Atrasado" title="ATRASADO"/>
+    <componente id="73" value="Hora de plazo" title="HORA_DE_PLAZO"/>
+    <componente id="74" value="enero" title="ENE"/>
+    <componente id="75" value="febrero" title="FEB"/>
+    <componente id="76" value="marzo" title="MAR"/>
+    <componente id="77" value="abril" title="ABR"/>
+    <componente id="78" value="mayo" title="MAY"/>
+    <componente id="79" value="junio" title="JUN"/>
+    <componente id="80" value="julio" title="JUL"/>
+    <componente id="81" value="agosto" title="AGO"/>
+    <componente id="82" value="septiembre" title="SEP"/>
+    <componente id="83" value="octubre" title="OCT"/>
+    <componente id="84" value="noviembre" title="NOV"/>
+    <componente id="85" value="diciembre" title="DIC"/>
+</config>
