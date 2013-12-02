@@ -1,0 +1,235 @@
+-- MySQL dump 10.13  Distrib 5.5.16, for Win32 (x86)
+--
+-- Host: localhost    Database: jedic
+-- ------------------------------------------------------
+-- Server version	5.5.16
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `alumno`
+--
+
+DROP TABLE IF EXISTS `alumno`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `alumno` (
+  `cod_alu` int(11) NOT NULL AUTO_INCREMENT,
+  `nom_alu` varchar(50) DEFAULT NULL,
+  `usu_alu` varchar(50) DEFAULT NULL,
+  `pas_alu` varchar(12) DEFAULT NULL,
+  `cod_sec` int(11) DEFAULT NULL,
+  `ano_alu` int(11) DEFAULT NULL,
+  `ema_alu` varchar(80) DEFAULT NULL,
+  PRIMARY KEY (`cod_alu`),
+  KEY `cod_sec` (`cod_sec`),
+  CONSTRAINT `alumno_ibfk_1` FOREIGN KEY (`cod_sec`) REFERENCES `seccion` (`cod_sec`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `alumno`
+--
+
+LOCK TABLES `alumno` WRITE;
+/*!40000 ALTER TABLE `alumno` DISABLE KEYS */;
+INSERT INTO `alumno` VALUES (1,'Diego Larenas','dlarenas','1',1,2012,'dlarenas@mail.com'),(2,'Patricio Pérez','pperez','1',3,2012,'pperez@mail.com');
+/*!40000 ALTER TABLE `alumno` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `director`
+--
+
+DROP TABLE IF EXISTS `director`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `director` (
+  `cod_dir` int(11) NOT NULL AUTO_INCREMENT,
+  `nom_dir` varchar(50) DEFAULT NULL,
+  `usu_dir` varchar(50) DEFAULT NULL,
+  `pas_dir` varchar(12) DEFAULT NULL,
+  `cod_sed` int(11) DEFAULT NULL,
+  `ema_dir` varchar(80) DEFAULT NULL,
+  `est_dir` varchar(15) DEFAULT NULL,
+  PRIMARY KEY (`cod_dir`),
+  KEY `cod_sed` (`cod_sed`),
+  CONSTRAINT `director_ibfk_1` FOREIGN KEY (`cod_sed`) REFERENCES `sede` (`cod_sed`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `director`
+--
+
+LOCK TABLES `director` WRITE;
+/*!40000 ALTER TABLE `director` DISABLE KEYS */;
+INSERT INTO `director` VALUES (1,'Pedro Gonzalez','pgonzalez','1',1,'pgonzalez@mail.com','vigente'),(2,'Carlos Riquelme','criquelme','kryY8ay6i6uX',2,'criquelme@mail.com','vigente'),(3,'Diego Rojas','drojas','C3SSWJTFxTEt',3,'drojas@mail.com','vigente');
+/*!40000 ALTER TABLE `director` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `ejercicio_alumno`
+--
+
+DROP TABLE IF EXISTS `ejercicio_alumno`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `ejercicio_alumno` (
+  `cod_eje` int(11) NOT NULL AUTO_INCREMENT,
+  `cod_alu` int(11) DEFAULT NULL,
+  `eje_alu` longblob,
+  `eje_pro` int(11) DEFAULT NULL,
+  `fec_eje` datetime DEFAULT NULL,
+  PRIMARY KEY (`cod_eje`),
+  KEY `cod_alu` (`cod_alu`),
+  KEY `eje_pro` (`eje_pro`),
+  CONSTRAINT `ejercicio_alumno_ibfk_1` FOREIGN KEY (`cod_alu`) REFERENCES `alumno` (`cod_alu`),
+  CONSTRAINT `ejercicio_alumno_ibfk_2` FOREIGN KEY (`eje_pro`) REFERENCES `ejercicio_profesor` (`cod_eje`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `ejercicio_alumno`
+--
+
+LOCK TABLES `ejercicio_alumno` WRITE;
+/*!40000 ALTER TABLE `ejercicio_alumno` DISABLE KEYS */;
+/*!40000 ALTER TABLE `ejercicio_alumno` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `ejercicio_profesor`
+--
+
+DROP TABLE IF EXISTS `ejercicio_profesor`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `ejercicio_profesor` (
+  `cod_eje` int(11) NOT NULL AUTO_INCREMENT,
+  `cod_sec` int(11) DEFAULT NULL,
+  `nom_eje` varchar(150) DEFAULT NULL,
+  `eje_pro` longblob,
+  `fec_eje` datetime DEFAULT NULL,
+  `fec_cre` datetime DEFAULT NULL,
+  `tod_sec` varchar(2) DEFAULT NULL,
+  `des_eje` varchar(140) DEFAULT NULL,
+  `cod_pro` int(11) DEFAULT NULL,
+  PRIMARY KEY (`cod_eje`),
+  KEY `cod_sec` (`cod_sec`),
+  KEY `cod_pro` (`cod_pro`),
+  CONSTRAINT `ejercicio_profesor_ibfk_1` FOREIGN KEY (`cod_sec`) REFERENCES `seccion` (`cod_sec`),
+  CONSTRAINT `ejercicio_profesor_ibfk_2` FOREIGN KEY (`cod_pro`) REFERENCES `profesor` (`cod_pro`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `ejercicio_profesor`
+--
+
+LOCK TABLES `ejercicio_profesor` WRITE;
+/*!40000 ALTER TABLE `ejercicio_profesor` DISABLE KEYS */;
+/*!40000 ALTER TABLE `ejercicio_profesor` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `profesor`
+--
+
+DROP TABLE IF EXISTS `profesor`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `profesor` (
+  `cod_pro` int(11) NOT NULL AUTO_INCREMENT,
+  `nom_pro` varchar(50) DEFAULT NULL,
+  `usu_pro` varchar(50) DEFAULT NULL,
+  `pas_pro` varchar(12) DEFAULT NULL,
+  `cod_dir` int(11) DEFAULT NULL,
+  `ema_pro` varchar(80) DEFAULT NULL,
+  `est_pro` varchar(15) DEFAULT NULL,
+  PRIMARY KEY (`cod_pro`),
+  KEY `cod_dir` (`cod_dir`),
+  CONSTRAINT `profesor_ibfk_1` FOREIGN KEY (`cod_dir`) REFERENCES `director` (`cod_dir`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `profesor`
+--
+
+LOCK TABLES `profesor` WRITE;
+/*!40000 ALTER TABLE `profesor` DISABLE KEYS */;
+INSERT INTO `profesor` VALUES (1,'Sin Profesor',NULL,NULL,1,NULL,'vigente'),(2,'Esteban Valenzuela','evalenzuela','1',1,'evalenzuela@mail.com','vigente'),(3,'Cesar Arce','carce','1',1,'carce@mail.com','vigente');
+/*!40000 ALTER TABLE `profesor` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `seccion`
+--
+
+DROP TABLE IF EXISTS `seccion`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `seccion` (
+  `cod_sec` int(11) NOT NULL AUTO_INCREMENT,
+  `num_sec` int(11) DEFAULT NULL,
+  `cod_pro` int(11) DEFAULT NULL,
+  PRIMARY KEY (`cod_sec`),
+  KEY `cod_pro` (`cod_pro`),
+  CONSTRAINT `seccion_ibfk_1` FOREIGN KEY (`cod_pro`) REFERENCES `profesor` (`cod_pro`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `seccion`
+--
+
+LOCK TABLES `seccion` WRITE;
+/*!40000 ALTER TABLE `seccion` DISABLE KEYS */;
+INSERT INTO `seccion` VALUES (1,20,2),(2,21,2),(3,22,3),(4,23,3);
+/*!40000 ALTER TABLE `seccion` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `sede`
+--
+
+DROP TABLE IF EXISTS `sede`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `sede` (
+  `cod_sed` int(11) NOT NULL AUTO_INCREMENT,
+  `nom_sed` varchar(30) DEFAULT NULL,
+  PRIMARY KEY (`cod_sed`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `sede`
+--
+
+LOCK TABLES `sede` WRITE;
+/*!40000 ALTER TABLE `sede` DISABLE KEYS */;
+INSERT INTO `sede` VALUES (1,'Rancagua'),(2,'Santiago'),(3,'Iquique');
+/*!40000 ALTER TABLE `sede` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2012-05-09 15:43:32

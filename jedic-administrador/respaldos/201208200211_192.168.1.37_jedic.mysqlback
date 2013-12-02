@@ -1,0 +1,440 @@
+-- MySQL dump 10.13  Distrib 5.5.21, for Win32 (x86)
+--
+-- Host: 192.168.1.37    Database: jedic
+-- ------------------------------------------------------
+-- Server version	5.5.21
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `administrador`
+--
+
+DROP TABLE IF EXISTS `administrador`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `administrador` (
+  `cod_adm` bigint(20) NOT NULL AUTO_INCREMENT,
+  `nom_adm` varchar(50) DEFAULT NULL,
+  `usu_adm` varchar(50) DEFAULT NULL,
+  `pas_adm` varchar(12) DEFAULT NULL,
+  PRIMARY KEY (`cod_adm`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `administrador`
+--
+
+LOCK TABLES `administrador` WRITE;
+/*!40000 ALTER TABLE `administrador` DISABLE KEYS */;
+INSERT INTO `administrador` VALUES (1,'Juan Perez','jperez','07091988');
+/*!40000 ALTER TABLE `administrador` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `alumno`
+--
+
+DROP TABLE IF EXISTS `alumno`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `alumno` (
+  `cod_alu` bigint(20) NOT NULL AUTO_INCREMENT,
+  `nom_alu` varchar(50) DEFAULT NULL,
+  `usu_alu` varchar(50) DEFAULT NULL,
+  `pas_alu` varchar(12) DEFAULT NULL,
+  `cod_sec` bigint(20) DEFAULT NULL,
+  `ano_alu` int(11) DEFAULT NULL,
+  `ema_alu` varchar(80) DEFAULT NULL,
+  PRIMARY KEY (`cod_alu`),
+  KEY `cod_sec` (`cod_sec`),
+  CONSTRAINT `alumno_ibfk_1` FOREIGN KEY (`cod_sec`) REFERENCES `seccion` (`cod_sec`)
+) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `alumno`
+--
+
+LOCK TABLES `alumno` WRITE;
+/*!40000 ALTER TABLE `alumno` DISABLE KEYS */;
+INSERT INTO `alumno` VALUES (1,'Diego Larenas','dlarenas','HVjA2uUDxpPE',1,2012,'Dlarenas@inacapmail.cl'),(2,'Jose Allende','jallende','qJBQqEokmmI1',1,2012,'Jallende@inacapmail.cl'),(3,'Diego Pozo','dpozo','OQ3aWvlH8U20',1,2012,'Dpozo@inacapmail.cl'),(4,'Alejandra Ahumada','aahumada','n8unEf3ye0mc',1,2012,'Aahumada@inacapmail.cl'),(5,'Maria Toro','mtoro','g7Vn2rJYpoKf',1,2012,'Mtoro@inacapmail.cl'),(6,'Marcela Rodriguez','mrodriguez','5EjaNLnIwD0c',1,2012,'Mrodriguez@inacapmail.cl'),(7,'Marco Osorio','mosorio','MAmhDbk9iv5S',1,2012,'Mosorio@inacapmail.cl'),(8,'Mariela Saez','msaez','Fv4MGdkJ648G',1,2012,'Msaez@inacapmail.cl'),(9,'Renato Caro','rcaro','Ftr5eUJrkZti',1,2012,'Rcaro@inacapmail.cl'),(10,'Cristian Valdebenito','cvaldebenito','I1VjQDS5uYAh',1,2012,'Cvaldebenito@inacapmail.cl'),(11,'Marybel Escobar','mescobar','HYB6FxrQQVFn',2,2012,'Mescobar@inacapmail.cl'),(12,'Jose Perez','jperez','fWCGfSymZkoM',2,2012,'Jperez@inacapmail.cl'),(13,'Juan Larenas','jlarenas','sdnb2mYC4NOy',2,2012,'Jlarenas@inacapmail.cl'),(14,'Marisela Santiba','msantiba','KVMY2mohhCqZ',2,2012,'Msantibaez@inacapmail.cl'),(15,'Victor Cavieres','vcavieres','iSNnxkLtJLUu',2,2012,'Vcavieres@inacapmail.cl'),(16,'Jonathan Larenas','jlarenas2','iGtTu3r7OPXn',2,2012,'Jlarenas@inacapmail.cl'),(17,'Nicole Gaete','ngaete','crImYgI1ujHH',2,2012,'Ngaete@inacapmail.cl'),(18,'Vicente Diaz','vdiaz','KFZ8pBewk4hL',2,2012,'VDiaz@inacapmail.cl'),(19,'Aida Valenzuela ','avalenzuela','nAOXwEmKoEoI',2,2012,'Avalenzuela@inacapmail.cl'),(20,'Daniela Garrido ','dgarrido','HjLNbPb41Y6J',2,2012,'Dgarrido@inacapmail.cl'),(21,'Fabiola Ampuero ','fampuero','KYiN3Rox5ISr',3,2012,'Fampuero@inacapmail.cl'),(22,'Sebastian Gonzalez','sgonzalez','oCnI18n9NSbE',3,2012,'Sgonzalez@inacapmail.cl'),(23,'Gonzalo Gutierrez','ggutierrez','TRduLhDsC7nw',3,2012,'Ggutierrez@inacapmail.cl'),(24,'Gonzalo Vial','gvial','FMRtU2TcPHRD',3,2012,'Gvial@inacapmail.cl'),(25,'Francisco Sanda','fsanda','fcCYFgCT7s3f',3,2012,'Fsandaa@inacapmail.cl'),(26,'Karina Bravo','kbravo','btMJR1Lypv8U',3,2012,'Kbravo@inacapmail.cl'),(27,'Felipe Acu','facu','UQXLdeTkIoRQ',3,2012,'Facua@inacapmail.cl'),(28,'Hernan Olave','holave','nrR857kRfa4x',3,2012,'Holave@inacapmail.cl'),(29,'Natalia Flores','nflores','mfbD2CDElSYl',3,2012,'Nflores@inacapmail.cl'),(30,'Julia Osses','josses','u5f6h8BP0Vm7',3,2012,'Josses@inacapmail.cl');
+/*!40000 ALTER TABLE `alumno` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `desvinculacion_director`
+--
+
+DROP TABLE IF EXISTS `desvinculacion_director`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `desvinculacion_director` (
+  `cod_des` bigint(20) NOT NULL AUTO_INCREMENT,
+  `cod_adm` bigint(20) DEFAULT NULL,
+  `cod_dir` bigint(20) DEFAULT NULL,
+  `cau_des` varchar(300) DEFAULT NULL,
+  `fec_des` datetime DEFAULT NULL,
+  PRIMARY KEY (`cod_des`),
+  KEY `cod_adm` (`cod_adm`),
+  KEY `cod_dir` (`cod_dir`),
+  CONSTRAINT `desvinculacion_director_ibfk_1` FOREIGN KEY (`cod_adm`) REFERENCES `administrador` (`cod_adm`),
+  CONSTRAINT `desvinculacion_director_ibfk_2` FOREIGN KEY (`cod_dir`) REFERENCES `director` (`cod_dir`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `desvinculacion_director`
+--
+
+LOCK TABLES `desvinculacion_director` WRITE;
+/*!40000 ALTER TABLE `desvinculacion_director` DISABLE KEYS */;
+INSERT INTO `desvinculacion_director` VALUES (1,1,17,'Motivo familiares','2012-08-19 18:29:54'),(2,1,18,'Enfermedad terminal','2012-08-19 18:39:43'),(3,1,19,'Es tonto','2012-08-19 18:42:36');
+/*!40000 ALTER TABLE `desvinculacion_director` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `desvinculacion_profesor`
+--
+
+DROP TABLE IF EXISTS `desvinculacion_profesor`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `desvinculacion_profesor` (
+  `cod_des` bigint(20) NOT NULL AUTO_INCREMENT,
+  `cod_pro` bigint(20) DEFAULT NULL,
+  `cau_des` varchar(300) DEFAULT NULL,
+  `fec_des` datetime DEFAULT NULL,
+  `res_des` bigint(20) DEFAULT NULL,
+  PRIMARY KEY (`cod_des`),
+  KEY `cod_pro` (`cod_pro`),
+  KEY `res_des` (`res_des`),
+  CONSTRAINT `desvinculacion_profesor_ibfk_1` FOREIGN KEY (`cod_pro`) REFERENCES `profesor` (`cod_pro`),
+  CONSTRAINT `desvinculacion_profesor_ibfk_2` FOREIGN KEY (`res_des`) REFERENCES `director` (`cod_dir`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `desvinculacion_profesor`
+--
+
+LOCK TABLES `desvinculacion_profesor` WRITE;
+/*!40000 ALTER TABLE `desvinculacion_profesor` DISABLE KEYS */;
+/*!40000 ALTER TABLE `desvinculacion_profesor` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `director`
+--
+
+DROP TABLE IF EXISTS `director`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `director` (
+  `cod_dir` bigint(20) NOT NULL AUTO_INCREMENT,
+  `nom_dir` varchar(50) DEFAULT NULL,
+  `usu_dir` varchar(50) DEFAULT NULL,
+  `pas_dir` varchar(12) DEFAULT NULL,
+  `cod_sed` bigint(20) DEFAULT NULL,
+  `ema_dir` varchar(80) DEFAULT NULL,
+  `est_dir` varchar(15) DEFAULT NULL,
+  PRIMARY KEY (`cod_dir`),
+  KEY `cod_sed` (`cod_sed`),
+  CONSTRAINT `director_ibfk_1` FOREIGN KEY (`cod_sed`) REFERENCES `sede` (`cod_sed`)
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `director`
+--
+
+LOCK TABLES `director` WRITE;
+/*!40000 ALTER TABLE `director` DISABLE KEYS */;
+INSERT INTO `director` VALUES (1,'Ricardo Merino','rmerino','jhiS9100nVgn',1,'patodeath@gmail.com','vigente'),(2,'Augusto Riquelme','ariquelme','PWrdMSgkyV7X',2,'ariquelme@inacapmail.cl','vigente'),(3,'Francisco Rojas','frojas','s6ugCiJZMslM',4,'frojas@inacapmail.cl','vigente'),(4,'Raul Hermosilla','rhermosilla','I2pJ5t5QTUxi',5,'rhermosilla@inacapmail.cl','vigente'),(5,'Roberto Rivera','rrivera','qAo9EUJ7fIhE',6,'rrivera@inacapmail.cl','vigente'),(6,'Juan Pablo Naviera','jnaviera','IWQ67CKLwCCR',7,'jnaviera@inacapmail.cl','vigente'),(7,'Pablo Galdames','pgaldames','r934Isq8tkjB',13,'pgaldames@inacapmail.cl','vigente'),(8,'Pedro Gonzalez','pgonzalez','patricio',14,'diegowea@gmail.com','vigente'),(9,'Ivan Moreira','imoreira','6v4hZbVCSDJP',16,'imoreira@inacapmail.cl','vigente'),(10,'Carlos Parra','cparra','vevmEZhD0yNR',19,'cparra@inacapmail.cl','vigente'),(11,'Juan Rocha','jrocha','XgADJRQKDZUQ',20,'jrocha@inacapmail.cl','vigente'),(12,'Eduardo Navarro','enavarro','gG6BhvGq3aAO',21,'enavarro@inacapmail.cl','vigente'),(13,'Claudio Rivadeneira','crivadeneria','i4ZOH9Yo8Hq2',23,'crivadeneria@inacapmail.cl','vigente'),(14,'Gustavo Catalan','gcatalan','Zv1vQHeZ9vbp',24,'gcatalan@inacapmail.cl','vigente'),(15,'Mauricio Isla','misla','8j82DX8eFbE0',25,'misla@inacapmail.cl','vigente'),(17,'Patricio Pérez','pperez','wYPF8Ynn1wIM',27,'pperezp@pperezp.com','eliminado'),(18,'Cristian Estay','cestay','NeHM7QHL0B9m',27,'cestay@gmail.com','eliminado'),(19,'Patricio Pérez','pperez2','GDI4dAVZPcdi',27,'patodeath@gmail.com','eliminado'),(20,'Fabiola Muñoz','fmunoz','2uc3lVCvZWqp',27,'fmunoz@inacapmail.cl','vigente');
+/*!40000 ALTER TABLE `director` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `ejercicio_alumno`
+--
+
+DROP TABLE IF EXISTS `ejercicio_alumno`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `ejercicio_alumno` (
+  `cod_eje` bigint(20) NOT NULL AUTO_INCREMENT,
+  `cod_alu` bigint(20) DEFAULT NULL,
+  `eje_alu` longblob,
+  `eje_pro` bigint(20) DEFAULT NULL,
+  `fec_eje` datetime DEFAULT NULL,
+  PRIMARY KEY (`cod_eje`),
+  KEY `cod_alu` (`cod_alu`),
+  KEY `eje_pro` (`eje_pro`),
+  CONSTRAINT `ejercicio_alumno_ibfk_1` FOREIGN KEY (`cod_alu`) REFERENCES `alumno` (`cod_alu`),
+  CONSTRAINT `ejercicio_alumno_ibfk_2` FOREIGN KEY (`eje_pro`) REFERENCES `ejercicio_profesor` (`cod_eje`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `ejercicio_alumno`
+--
+
+LOCK TABLES `ejercicio_alumno` WRITE;
+/*!40000 ALTER TABLE `ejercicio_alumno` DISABLE KEYS */;
+/*!40000 ALTER TABLE `ejercicio_alumno` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `ejercicio_profesor`
+--
+
+DROP TABLE IF EXISTS `ejercicio_profesor`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `ejercicio_profesor` (
+  `cod_eje` bigint(20) NOT NULL AUTO_INCREMENT,
+  `cod_sec` bigint(20) DEFAULT NULL,
+  `nom_eje` varchar(150) DEFAULT NULL,
+  `eje_pro` longblob,
+  `fec_eje` datetime DEFAULT NULL,
+  `fec_cre` datetime DEFAULT NULL,
+  `tod_sec` varchar(2) DEFAULT NULL,
+  `des_eje` varchar(140) DEFAULT NULL,
+  `cod_pro` bigint(20) DEFAULT NULL,
+  PRIMARY KEY (`cod_eje`),
+  KEY `cod_sec` (`cod_sec`),
+  KEY `cod_pro` (`cod_pro`),
+  CONSTRAINT `ejercicio_profesor_ibfk_1` FOREIGN KEY (`cod_sec`) REFERENCES `seccion` (`cod_sec`),
+  CONSTRAINT `ejercicio_profesor_ibfk_2` FOREIGN KEY (`cod_pro`) REFERENCES `profesor` (`cod_pro`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `ejercicio_profesor`
+--
+
+LOCK TABLES `ejercicio_profesor` WRITE;
+/*!40000 ALTER TABLE `ejercicio_profesor` DISABLE KEYS */;
+/*!40000 ALTER TABLE `ejercicio_profesor` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `historial`
+--
+
+DROP TABLE IF EXISTS `historial`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `historial` (
+  `cod_his` bigint(20) NOT NULL AUTO_INCREMENT,
+  `nom_tab` varchar(15) DEFAULT NULL,
+  `cod_per` bigint(20) DEFAULT NULL,
+  `det_his` varchar(400) DEFAULT NULL,
+  `fec_his` datetime DEFAULT NULL,
+  PRIMARY KEY (`cod_his`)
+) ENGINE=InnoDB AUTO_INCREMENT=100 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `historial`
+--
+
+LOCK TABLES `historial` WRITE;
+/*!40000 ALTER TABLE `historial` DISABLE KEYS */;
+INSERT INTO `historial` VALUES (1,'administrador',1,'Inició sesión','2012-08-19 18:13:42'),(2,'administrador',1,'Cerró sesión','2012-08-19 18:13:44'),(3,'administrador',NULL,'Alguien intentó ingresar al sistem como administrador. User: jperez','2012-08-19 18:17:59'),(4,'administrador',1,'Inició sesión','2012-08-19 18:21:46'),(5,'administrador',1,'Se consultó la ayuda del sistema','2012-08-19 18:22:00'),(6,'administrador',1,'Rescató sedes desde BD Central','2012-08-19 18:22:11'),(7,'administrador',1,'Rescató directores desde BD Central','2012-08-19 18:22:15'),(8,'administrador',1,'Creó una sede: Rengo','2012-08-19 18:22:34'),(11,'administrador',1,'Cerró sesión','2012-08-19 18:23:52'),(12,'administrador',1,'Inició sesión','2012-08-19 18:28:45'),(13,'administrador',1,'Creó una sede: Rengo','2012-08-19 18:28:58'),(14,'administrador',1,'Creó director: [director=Patricio Pérez, usuario=pperez, sede=Rengo]','2012-08-19 18:29:25'),(15,'administrador',1,'Intentando inabilitar a director...','2012-08-19 18:29:43'),(16,'administrador',1,'Cambió a [director=Patricio Pérez, usuario=pperez, sede=Rengo] al listado de directores NO vigentes. Causal: Motivo familiares','2012-08-19 18:29:54'),(17,'administrador',1,'Se realizó un reemplazo de directores: [director=Patricio Pérez, usuario=pperez, sede=Rengo] se reemplazó por [director=, usuario=cestay, sede=Rengo]','2012-08-19 18:31:01'),(18,'administrador',1,'Cerró sesión','2012-08-19 18:32:45'),(19,'administrador',NULL,'Se inició la ejecución del sistema JEDIC Administrador','2012-08-19 18:39:20'),(20,'administrador',1,'Inició sesión','2012-08-19 18:39:31'),(21,'administrador',1,'Intentando inabilitar a director...','2012-08-19 18:39:37'),(22,'administrador',1,'Cambió a [director=Cristian Estay, usuario=cestay, sede=Rengo] al listado de directores NO vigentes. Causal: Enfermedad terminal','2012-08-19 18:39:43'),(23,'administrador',1,'Se realizó un reemplazo de director: [director=Cristian Estay, usuario=cestay, sede=Rengo] fue reemplazado por [director=Patricio Pérez, usuario=pperez2, sede=Rengo]','2012-08-19 18:40:17'),(24,'administrador',1,'Se realizó un respaldo completo de la base de datos','2012-08-19 18:41:15'),(25,'administrador',1,'Se restauró la base de datos completa. Archivo de restauración: C:Documents and SettingsPato PérezMis documentosDropboxCodificacion JEDI C con Mysqladministrador\respaldos201208191444_192.168.1.37_jedic.mysqlback','2012-08-19 18:41:44'),(26,'administrador',1,'Intentando inabilitar a director...','2012-08-19 18:42:31'),(27,'administrador',1,'Cambió a [director=Patricio Pérez, usuario=pperez2, sede=Rengo] al listado de directores NO vigentes. Causal: Es tonto','2012-08-19 18:42:36'),(28,'administrador',1,'Cerró sesión','2012-08-19 18:42:53'),(29,'administrador',NULL,'Se terminó la ejecución del sistema JEDIC Administrador','2012-08-19 18:42:54'),(30,'administrador',NULL,'Se inició la ejecución del sistema JEDIC Administrador','2012-08-19 18:45:41'),(31,'administrador',1,'Inició sesión','2012-08-19 18:45:45'),(32,'administrador',1,'Se realizó un reemplazo de director: [director=Patricio Pérez, usuario=pperez2, sede=Rengo] fue reemplazado por [director=Fabiola Muñoz, usuario=fmunoz, sede=Rengo]','2012-08-19 18:45:59'),(33,'administrador',1,'Cerró sesión','2012-08-19 18:46:08'),(34,'administrador',NULL,'Se terminó la ejecución del sistema JEDIC Administrador','2012-08-19 18:46:09'),(35,'director',NULL,'Se inició la ejecución del sistema JEDIC Director','2012-08-19 19:31:07'),(36,'director',NULL,'Se terminó la ejecución del sistema JEDIC Director','2012-08-19 19:31:10'),(37,'director',NULL,'Se inició la ejecución del sistema JEDIC Director','2012-08-19 19:52:03'),(39,'director',NULL,'Se terminó la ejecución del sistema JEDIC Director','2012-08-19 19:53:26'),(40,'director',NULL,'Se inició la ejecución del sistema JEDIC Director','2012-08-19 20:03:20'),(41,'director',NULL,'Un director solicitó la recuperación de su contraseña pero ha ingresado mal su nombre de usuario. [user=Ricardo merino]','2012-08-19 20:03:37'),(42,'director',NULL,'Un director solicitó la recuperación de su contraseña y se ha enviado un correo con la información. [director=Ricardo Merino,sede=Arica,email=patodeath@gmail.com]','2012-08-19 20:03:57'),(43,'director',NULL,'Se terminó la ejecución del sistema JEDIC Director','2012-08-19 20:04:49'),(44,'director',NULL,'Se inició la ejecución del sistema JEDIC Director','2012-08-19 20:07:29'),(45,'director',NULL,'Se terminó la ejecución del sistema JEDIC Director','2012-08-19 20:07:31'),(46,'director',NULL,'Se inició la ejecución del sistema JEDIC Director','2012-08-19 20:10:28'),(47,'director',NULL,'Un director solicitó la recuperación de su contraseña y se ha enviado un correo con la información. [director=Ricardo Merino,sede=Arica,email=patodeath@gmail.com]','2012-08-19 20:10:40'),(48,'director',NULL,'Se inició la ejecución del sistema JEDIC Director','2012-08-19 20:15:39'),(49,'director',NULL,'Un director solicitó la recuperación de su contraseña y se ha enviado un correo con la información. [director=Ricardo Merino,sede=Arica,email=patodeath@gmail.com]','2012-08-19 20:16:06'),(50,'director',NULL,'Se terminó la ejecución del sistema JEDIC Director','2012-08-19 20:16:49'),(51,'director',NULL,'Se inició la ejecución del sistema JEDIC Director','2012-08-19 20:22:03'),(52,'director',NULL,'Un director solicitó la recuperación de su contraseña y se ha enviado un correo con la información. [director=Ricardo Merino,sede=Arica,email=patodeath@gmail.com]','2012-08-19 20:22:13'),(53,'director',NULL,'Se inició la ejecución del sistema JEDIC Director','2012-08-19 20:22:54'),(54,'director',NULL,'Se terminó la ejecución del sistema JEDIC Director','2012-08-19 20:22:59'),(55,'director',NULL,'Se inició la ejecución del sistema JEDIC Director','2012-08-19 20:23:51'),(56,'director',NULL,'Un director solicitó la recuperación de su contraseña y se ha enviado un correo con la información. [director=Ricardo Merino,sede=Arica,email=patodeath@gmail.com]','2012-08-19 20:24:02'),(57,'director',NULL,'Se inició la ejecución del sistema JEDIC Director','2012-08-19 20:27:26'),(58,'director',NULL,'Un director solicitó la recuperación de su contraseña y se ha enviado un correo con la información. [director=Ricardo Merino,sede=Arica,email=patodeath@gmail.com]','2012-08-19 20:27:41'),(59,'director',1,'Inició sesión','2012-08-19 20:27:52'),(60,'director',NULL,'Se inició la ejecución del sistema JEDIC Director','2012-08-19 20:32:33'),(61,'director',NULL,'Se terminó la ejecución del sistema JEDIC Director','2012-08-19 20:33:07'),(62,'director',NULL,'Se inició la ejecución del sistema JEDIC Director','2012-08-19 20:33:25'),(63,'director',NULL,'Se terminó la ejecución del sistema JEDIC Director','2012-08-19 20:33:52'),(64,'director',NULL,'Se inició la ejecución del sistema JEDIC Director','2012-08-19 20:35:15'),(65,'director',NULL,'Un director solicitó la recuperación de su contraseña y se ha enviado un correo con la información. [director=Ricardo Merino, sede=Arica, email=patodeath@gmail.com]','2012-08-19 20:35:29'),(66,'director',NULL,'Se terminó la ejecución del sistema JEDIC Director','2012-08-19 20:35:35'),(67,'director',NULL,'Se inició la ejecución del sistema JEDIC Director','2012-08-19 20:39:40'),(68,'director',NULL,'Un director solicitó la recuperación de su contraseña y se ha enviado un correo con la información. [director=Pedro Gonzalez, sede=Rancagua, email=diegowea@gmail.com]','2012-08-19 20:39:50'),(69,'director',NULL,'Se terminó la ejecución del sistema JEDIC Director','2012-08-19 20:39:53'),(70,'administrador',NULL,'Se inició la ejecución del sistema JEDIC Administrador','2012-08-19 22:08:58'),(71,'administrador',NULL,'Se terminó la ejecución del sistema JEDIC Administrador','2012-08-19 22:09:35'),(72,'director',NULL,'Se inició la ejecución del sistema JEDIC Director','2012-08-19 22:38:44'),(73,'director',8,'Inició sesión','2012-08-19 22:40:39'),(74,'director',8,'Se consultó la ayuda del sistema','2012-08-19 22:40:55'),(75,'director',8,'Se rescataron profesores y secciones desde la base de datos central','2012-08-19 22:41:03'),(76,'director',NULL,'Se inició la ejecución del sistema JEDIC Director','2012-08-19 22:43:02'),(77,'director',8,'Inició sesión','2012-08-19 22:43:08'),(78,'director',8,'Inició sesión','2012-08-19 22:43:16'),(79,'director',NULL,'Se terminó la ejecución del sistema JEDIC Director','2012-08-19 22:43:25'),(80,'director',NULL,'Se inició la ejecución del sistema JEDIC Director','2012-08-19 22:58:34'),(81,'director',8,'Inició sesión','2012-08-19 22:58:39'),(82,'director',8,'Cerró sesión','2012-08-19 22:58:54'),(83,'director',NULL,'Se terminó la ejecución del sistema JEDIC Director','2012-08-19 22:58:55'),(84,'director',NULL,'Se inició la ejecución del sistema JEDIC Director','2012-08-19 23:01:02'),(85,'director',8,'Inició sesión','2012-08-19 23:01:17'),(86,'director',8,'Cerró sesión','2012-08-19 23:01:31'),(87,'director',NULL,'Se terminó la ejecución del sistema JEDIC Director','2012-08-19 23:01:32'),(88,'director',NULL,'Se inició la ejecución del sistema JEDIC Director','2012-08-19 23:02:53'),(89,'director',8,'Inició sesión','2012-08-19 23:02:59'),(90,'director',8,'Cerró sesión','2012-08-19 23:03:36'),(91,'director',NULL,'Se terminó la ejecución del sistema JEDIC Director','2012-08-19 23:03:37'),(92,'director',NULL,'Se inició la ejecución del sistema JEDIC Director','2012-08-19 23:08:46'),(93,'director',NULL,'Se terminó la ejecución del sistema JEDIC Director','2012-08-19 23:09:06'),(94,'director',NULL,'Se inició la ejecución del sistema JEDIC Director','2012-08-20 02:10:04'),(95,'director',8,'Inició sesión','2012-08-20 02:10:41'),(96,'director',8,'Cerró sesión','2012-08-20 02:11:12'),(97,'director',NULL,'Se terminó la ejecución del sistema JEDIC Director','2012-08-20 02:11:13'),(98,'administrador',NULL,'Se inició la ejecución del sistema JEDIC Administrador','2012-08-20 02:11:25'),(99,'administrador',1,'Inició sesión','2012-08-20 02:11:51');
+/*!40000 ALTER TABLE `historial` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `mensaje`
+--
+
+DROP TABLE IF EXISTS `mensaje`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `mensaje` (
+  `cod_men` bigint(20) NOT NULL AUTO_INCREMENT,
+  `asu_men` varchar(50) DEFAULT NULL,
+  `cod_pro` bigint(20) DEFAULT NULL,
+  `cod_alu` bigint(20) DEFAULT NULL,
+  `fec_men` datetime DEFAULT NULL,
+  `men_men` varchar(300) DEFAULT NULL,
+  PRIMARY KEY (`cod_men`),
+  KEY `cod_pro` (`cod_pro`),
+  KEY `cod_alu` (`cod_alu`),
+  CONSTRAINT `mensaje_ibfk_1` FOREIGN KEY (`cod_pro`) REFERENCES `profesor` (`cod_pro`),
+  CONSTRAINT `mensaje_ibfk_2` FOREIGN KEY (`cod_alu`) REFERENCES `alumno` (`cod_alu`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `mensaje`
+--
+
+LOCK TABLES `mensaje` WRITE;
+/*!40000 ALTER TABLE `mensaje` DISABLE KEYS */;
+/*!40000 ALTER TABLE `mensaje` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `mensaje_seccion`
+--
+
+DROP TABLE IF EXISTS `mensaje_seccion`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `mensaje_seccion` (
+  `cod_men` bigint(20) NOT NULL AUTO_INCREMENT,
+  `asu_men` varchar(50) DEFAULT NULL,
+  `cod_pro` bigint(20) DEFAULT NULL,
+  `cod_sec` bigint(20) DEFAULT NULL,
+  `fec_men` datetime DEFAULT NULL,
+  `men_men` varchar(300) DEFAULT NULL,
+  PRIMARY KEY (`cod_men`),
+  KEY `cod_pro` (`cod_pro`),
+  KEY `cod_sec` (`cod_sec`),
+  CONSTRAINT `mensaje_seccion_ibfk_1` FOREIGN KEY (`cod_pro`) REFERENCES `profesor` (`cod_pro`),
+  CONSTRAINT `mensaje_seccion_ibfk_2` FOREIGN KEY (`cod_sec`) REFERENCES `seccion` (`cod_sec`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `mensaje_seccion`
+--
+
+LOCK TABLES `mensaje_seccion` WRITE;
+/*!40000 ALTER TABLE `mensaje_seccion` DISABLE KEYS */;
+/*!40000 ALTER TABLE `mensaje_seccion` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `profesor`
+--
+
+DROP TABLE IF EXISTS `profesor`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `profesor` (
+  `cod_pro` bigint(20) NOT NULL AUTO_INCREMENT,
+  `nom_pro` varchar(50) DEFAULT NULL,
+  `usu_pro` varchar(50) DEFAULT NULL,
+  `pas_pro` varchar(12) DEFAULT NULL,
+  `cod_dir` bigint(20) DEFAULT NULL,
+  `ema_pro` varchar(80) DEFAULT NULL,
+  `est_pro` varchar(15) DEFAULT NULL,
+  PRIMARY KEY (`cod_pro`),
+  KEY `cod_dir` (`cod_dir`),
+  CONSTRAINT `profesor_ibfk_1` FOREIGN KEY (`cod_dir`) REFERENCES `director` (`cod_dir`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `profesor`
+--
+
+LOCK TABLES `profesor` WRITE;
+/*!40000 ALTER TABLE `profesor` DISABLE KEYS */;
+INSERT INTO `profesor` VALUES (1,'Sin Profesor',NULL,NULL,1,NULL,'vigente'),(2,'Sin Profesor',NULL,NULL,8,NULL,'vigente'),(3,'Esteban Valenzuela','evalenzuela','LcoIF33swvF0',8,'mpino@inacapmail.cl','vigente'),(4,'Cesar Arce','carce','ShUxXkKtnOoa',8,'null','vigente'),(5,'Macarena Pino','mpino','pcGLZCD5L582',8,'null','vigente');
+/*!40000 ALTER TABLE `profesor` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `seccion`
+--
+
+DROP TABLE IF EXISTS `seccion`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `seccion` (
+  `cod_sec` bigint(20) NOT NULL AUTO_INCREMENT,
+  `num_sec` int(11) DEFAULT NULL,
+  `cod_pro` bigint(20) DEFAULT NULL,
+  PRIMARY KEY (`cod_sec`),
+  KEY `cod_pro` (`cod_pro`),
+  CONSTRAINT `seccion_ibfk_1` FOREIGN KEY (`cod_pro`) REFERENCES `profesor` (`cod_pro`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `seccion`
+--
+
+LOCK TABLES `seccion` WRITE;
+/*!40000 ALTER TABLE `seccion` DISABLE KEYS */;
+INSERT INTO `seccion` VALUES (1,201,3),(2,211,4),(3,221,5);
+/*!40000 ALTER TABLE `seccion` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `sede`
+--
+
+DROP TABLE IF EXISTS `sede`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `sede` (
+  `cod_sed` bigint(20) NOT NULL AUTO_INCREMENT,
+  `nom_sed` varchar(30) DEFAULT NULL,
+  PRIMARY KEY (`cod_sed`)
+) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `sede`
+--
+
+LOCK TABLES `sede` WRITE;
+/*!40000 ALTER TABLE `sede` DISABLE KEYS */;
+INSERT INTO `sede` VALUES (1,'Arica'),(2,'Iquique'),(3,'Calama'),(4,'Antofagasta'),(5,'Copiapo'),(6,'La Serena'),(7,'Valparaiso'),(8,'Apoquindo'),(9,'Maipu'),(10,'Renca'),(11,'Perez Rosales'),(12,'Santiago centro'),(13,'Santiago sur'),(14,'Rancagua'),(15,'Curico'),(16,'Talca'),(17,'Chillan'),(18,'Concepcion-Talcahuano'),(19,'Los Angeles'),(20,'Temuco'),(21,'Valdivia'),(22,'Osorno'),(23,'Puerto Montt'),(24,'Coyhaique'),(25,'Punta Arenas'),(27,'Rengo');
+/*!40000 ALTER TABLE `sede` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `tiempo_chat`
+--
+
+DROP TABLE IF EXISTS `tiempo_chat`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `tiempo_chat` (
+  `cod_tie` bigint(20) NOT NULL AUTO_INCREMENT,
+  `cod_alu` bigint(20) DEFAULT NULL,
+  `pri_con` datetime DEFAULT NULL,
+  `ult_con` datetime DEFAULT NULL,
+  `dur_ult` mediumtext,
+  `dur_tot` mediumtext,
+  PRIMARY KEY (`cod_tie`),
+  KEY `cod_alu` (`cod_alu`),
+  CONSTRAINT `tiempo_chat_ibfk_1` FOREIGN KEY (`cod_alu`) REFERENCES `alumno` (`cod_alu`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tiempo_chat`
+--
+
+LOCK TABLES `tiempo_chat` WRITE;
+/*!40000 ALTER TABLE `tiempo_chat` DISABLE KEYS */;
+/*!40000 ALTER TABLE `tiempo_chat` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2012-08-20  2:11:58
