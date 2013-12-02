@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<config>
+<historial habilitado="true"/>
+<apariencia substance="false" tema="sistema_actual">
+<color>
+<componente id="comentario" rgb="-16744448"/>
+<componente id="palabraReservada" rgb="-16776961"/>
+<componente id="funciones" rgb="-5406720"/>
+<componente id="cadenas" rgb="-10223416"/>
+<componente id="tiposDeDatos" rgb="-16744320"/>
+<componente id="fondo" rgb="-1"/>
+<componente id="codigo" rgb="-16777216"/>
+<componente id="linea" rgb="-86"/>
+</color>
+<lineas habilitado="true"/>
+</apariencia>
+</config>

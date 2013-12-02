@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<jedic>
+    <basico>
+        <palabra value="auto"/>
+        <palabra value="break"/>
+        <palabra value="case"/>
+        <palabra value="char"/>
+        <palabra value="const"/>
+        <palabra value="continue"/>
+        <palabra value="default"/>
+        <palabra value="do"/>
+        <palabra value="double"/>
+        <palabra value="else"/>
+        <palabra value="enum"/>
+        <palabra value="extern"/>
+        <palabra value="float"/>
+        <palabra value="for"/>
+        <palabra value="goto"/>
+        <palabra value="if"/>
+        <palabra value="if(){}"/>
+        <palabra value="if(){}else{}"/>
+        <palabra value="int"/>
+        <palabra value="long"/>
+        <palabra value="register"/>
+        <palabra value="return"/>
+        <palabra value="short"/>
+        <palabra value="signed"/>
+        <palabra value="sizeof"/>
+        <palabra value="static"/>
+        <palabra value="struct"/>
+        <palabra value="typedef"/>
+        <palabra value="union"/>
+        <palabra value="unsigned"/>
+        <palabra value="void"/>
+        <palabra value="volatile"/>
+        <palabra value="while"/>
+        <palabra value="while(){}"/>
+        <palabra value="-1">
+            <![CDATA[printf("");]]>
+        </palabra>
+        <palabra value="-1">
+            <![CDATA[scanf("%", &);]]>
+        </palabra>
+    </basico>
+    <avanzado>
+        <palabra title="_jedic_printf" desc="printf básico">
+            <![CDATA[printf("");]]>
+        </palabra>
+        <palabra title="_jedic_printf" desc="printf int">
+            <![CDATA[printf("%d",);]]>
+        </palabra>
+        <palabra title="_jedic_printf" desc="printf string">
+            <![CDATA[printf("%s",);]]>
+        </palabra>
+        <palabra title="_jedic_printf" desc="printf caracter">
+            <![CDATA[printf("%c",);]]>
+        </palabra>
+        <palabra title="_jedic_scanf" desc="scanf básico">
+            <![CDATA[scanf("%", &);]]>
+        </palabra>
+        <palabra title="_jedic_scanf" desc="scanf string">
+            <![CDATA[scanf("%s", &);]]>
+        </palabra>
+        <palabra title="_jedic_scanf" desc="scanf int">
+            <![CDATA[scanf("%d", &);]]>
+        </palabra>
+        <palabra title="_jedic_scanf" desc="scanf caracter">
+            <![CDATA[scanf("%c", &);]]>
+        </palabra>
+        
+        <palabra title="_jedic_for" desc="Ciclo for">
+             <![CDATA[int i;
+    for(i=; i<; i++){
+
+    }]]>
+        </palabra>
+        <palabra title="_jedic_for_anidado" desc="Ciclo for anidado">
+             <![CDATA[int i, j;
+for(i= ; i< ; i++){
+   for(j= ; j< ; j++){
+                
+   }
+}]]>
+        </palabra>
+        <palabra title="_jedic_if" desc="if">
+             <![CDATA[if(){
+             
+    }]]>
+        </palabra>
+        <palabra title="_jedic_if_else" desc="if else">
+             <![CDATA[if(){
+             
+    }else{
+
+    }]]>
+        </palabra>
+        <palabra title="_jedic_if_else_if" desc="if else if">
+             <![CDATA[if(){
+             
+    }else if(){
+
+    }]]>
+        </palabra>
+        <palabra title="_jedic_do_while" desc="do while">
+             <![CDATA[do{
+             
+    }while();]]>
+        </palabra>
+        <palabra title="_jedic_main" desc="Función principal">
+             <![CDATA[int main(void){
+
+    return 0;
+}]]>
+        </palabra>
+        
+        <palabra title="_jedic_librerías_básicas" desc="Librerías básicas">
+             <![CDATA[#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <conio.h>]]>
+        </palabra>
+        <palabra title="_jedic_incluir_stdio" desc="Librería stdio.h">
+             <![CDATA[#include <stdio.h>]]>
+        </palabra>
+        <palabra title="_jedic_incluir_conio" desc="Librería conio.h">
+             <![CDATA[#include <conio.h>]]>
+        </palabra>
+        <palabra title="_jedic_incluir_stdlib" desc="Librería stdlib.h">
+             <![CDATA[#include <stdlib.h>]]>
+        </palabra>
+        <palabra title="_jedic_incluir_string" desc="Librería string.h">
+             <![CDATA[#include <string.h>]]>
+        </palabra>
+        <palabra title="_jedic_incluir_math" desc="Librería math.h">
+             <![CDATA[#include <math.h>]]>
+        </palabra>
+        <palabra title="_jedic_incluir_ctype" desc="Librería ctype.h">
+             <![CDATA[#include <ctype.h>]]>
+        </palabra>
+        <palabra title="_jedic_getche" desc="Hacer una pausa">
+             <![CDATA[getche();]]>
+        </palabra>
+        <palabra title="_jedic_system_pause" desc="Hacer una pausa">
+             <![CDATA[system("pause");]]>
+        </palabra>
+        <palabra title="_jedic_switch_case" desc="switch case">
+             <![CDATA[switch(){
+        case 1:{
+            break;
+        }
+        case 2:{
+            break;
+        }
+        default:{
+
+        }
+    }]]>
+        </palabra>
+        <palabra title="_jedic_menú" desc="Menú simple">
+             <![CDATA[int op;
+    do{    
+        do{
+            printf("\nMENÚ PRINCIPAL");
+            printf("\n--------------");
+            printf("\n1.- Opcion 1");
+            printf("\n2.- Opcion 2");
+            printf("\n3.- Salir");
+            printf("\nOPC: ");
+            scanf("%d", &op);
+        }while(op < 1 || op > 3);  
+        switch(op){
+            case 1:{
+                //caso de ser opción 1
+                break;
+            }
+            case 2:{
+                //caso de ser opción 2
+                break;
+            }
+            case 3:{
+                //caso de ser opción 3
+                break;
+            }
+        }
+    }while(op != 3);
+    ]]>
+        </palabra>
+    </avanzado>
+</jedic>

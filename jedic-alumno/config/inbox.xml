@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<mensajes>
+<m codigo="a_1" leido="si"/>
+<m codigo="a_2" leido="si"/>
+<m codigo="a_3" leido="si"/>
+<m codigo="s_2" leido="si"/>
+<m codigo="s_3" leido="si"/>
+<m codigo="s_4" leido="si"/>
+<m codigo="a_4" leido="no"/>
+<m codigo="a_5" leido="no"/>
+<m codigo="a_7" leido="no"/>
+<m codigo="s_5" leido="si"/>
+<m codigo="s_6" leido="no"/>
+</mensajes>
