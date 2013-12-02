@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<config idioma="Español">
+	<!-- TITULOS -->
+    <titulo id="0" value="Plataforma Director/a " title="PLATAFORMA_DIRECTOR"/>
+    <titulo id="1" value="Crear profesor/a" title="CREAR_PROFESOR"/>
+    <titulo id="2" value="Crear o asignar sección" title="CREAR_O_ASIGNAR_SECCION"/>
+    <titulo id="3" value="Modificar profesor/a" title="MODIFICAR_PROFESOR"/>
+    <titulo id="4" value="Crear alumnos/as" title="CREAR_ALUMNOS"/>
+    <titulo id="5" value="Reportes" title="REPORTES"/>
+    <titulo id="6" value="Reportes avanzados" title="REPORTES_AVANZADOS"/>
+    <titulo id="7" value="Director/a" title="DIRECTOR"/>
+    <titulo id="8" value="Sede" title="SEDE"/>
+	<!-- COMPONENTES -->
+    <componente id="9" value="Información" title="INFORMACION"/>
+    <componente id="10" value="Nº de sección" title="N_DE_SECCION"/>
+    <componente id="11" value="Profesor/a" title="PROFESOR"/>
+    <componente id="12" value="Crear sección" title="CREAR_SECCION"/>
+    <componente id="13" value="Listado de secciones" title="LISTADO_SECCIONES"/>
+    <componente id="14" value="Código" title="CODIGO"/>
+    <componente id="15" value="Número de sección" title="NUM_SECCION"/>
+    <componente id="16" value="Nombre profesor/a" title="NOMBRE_PROFESOR"/>
+    <componente id="17" value="E-Mail" title="MAIL"/>
+    <componente id="18" value="Listado de profesores" title="LISTADO_PROFESORES"/>
+    <componente id="19" value="Usuario" title="USUARIO"/>
+    <componente id="20" value="Contraseña" title="CONTRASENA"/>
+    <componente id="21" value="Iniciar Sesión" title="INICIAR_SESION"/>
+    <componente id="22" value="Recuperar Contraseña" title="RECUPERAR_CONTRASENA"/>
+    <componente id="23" value="Profesores vigentes" title="PROFESORES_VIGENTES"/>
+    <componente id="24" value="Profesores no vigentes" title="PROFESORES_NO_VIGENTES"/>
+    <componente id="25" value="Datos profesor/a" title="DATOS_NUEVO_PROFESOR"/>
+    <componente id="26" value="Actualizar datos del profesor/a" title="REEMPLAZAR_PROFESOR"/>
+    <componente id="27" value="Sección" title="SECCION"/>
+    <componente id="28" value="Crear alumno/a" title="CREAR_ALUMNO"/>
+    <componente id="29" value="Importar desde XLS" title="IMPORTAR_XLS"/>
+    <componente id="30" value="Listado de alumnos/as" title="LISTADO_ALUMNOS"/>
+    <componente id="31" value="Nombre" title="NOMBRE"/>
+    <componente id="32" value="Secciones" title="SECCIONES"/>
+    <componente id="33" value="Secciones que utilizan más la aplicación" title="SECCIONES_UTIL_MAS_APLI"/>
+    <componente id="34" value="Fecha Inicio" title="FECHA_INICIO"/>
+    <componente id="35" value="Fecha Término" title="FECHA_TERMINO"/>
+    <componente id="36" value="Profesores/as" title="PROFESORES"/>
+    <componente id="37" value="Profesores/as que utilizan más la aplicación" title="PROFESORES_UTIL_MAS_APLI"/>
+    <componente id="38" value="Datos reporte" title="DATOS_REPORTE"/>
+    <componente id="39" value="Desde" title="DESDE"/>
+    <componente id="40" value="(Año)" title="ANIO"/>
+    <componente id="41" value="Hasta" title="HASTA"/>
+    <componente id="42" value="Cambiar contraseña" title="CAMBIAR_CONTRASENA"/>
+    <componente id="43" value="Contraseña nueva" title="CONTRASENA_NUEVA"/>
+    <componente id="44" value="Repetir contraseña" title="REPETIR_CONTRASENA"/>
+    <componente id="45" value="Errores" title="ERRORES"/>
+	<!-- MENSAJES -->
+    <mensaje id="46" value="Error al iniciar sesión. Compruebe su nombre de usuario y/o contraseña" title="ERROR_INICIAR_SESION_COMPR_NOM"/>
+    <mensaje id="47" value="Debe escribir el nombre de usuario para poder recuperar su clave" title="DEBE_ESCR_NOM_USU"/>
+    <mensaje id="48" value="Al parecer, usted no posee una conexión a internet. No se puede recuperar su clave" title="AL_PARECER_NO_CONEXION"/>
+    <mensaje id="49" value="Deshabilitar" title="ELIMINAR"/><!--BOTON ELIMINAR DE TODAS LAS PESTAÑAS-->
+    <mensaje id="50" value="Cerrar sesión" title="CERRAR_SESION"/>
+    <mensaje id="51" value="Profesor/a creado/a exitósamente " title="PROFESOR_CREADO_EXITO"/>
+    <mensaje id="52" value="E-mail incorrecto" title="MAIL_INCORRECTO"/>
+    <mensaje id="53" value="Nombre de profesor/a incorrecto" title="NOMBRE_PROFESOR_INCO"/>
+    <mensaje id="54" value="No se permiten símbolos ni números" title="NO_SE_PERMIT_SIMB"/>
+    <mensaje id="55" value="Faltan datos. Revise" title="FALTAN_DATOS"/>
+    <mensaje id="56" value="El usuario ya se encuentra en los registros de la BD. Se cambiará el nombre a " title="EL_USU_YA_SE_ENCUENTRA"/>
+    <mensaje id="57" value="Sección actualizada: Sección Nº " title="SECCION_ACTUALIZADA"/>
+    <mensaje id="58" value="Sección creada exitósamente: Sección Nº " title="SECCION_CREADA_EXITO"/>
+    <mensaje id="59" value="No se admiten secciones menores a 1" title="NO_SE_ADMITEN_SEC_MEN_1"/>
+    <mensaje id="60" value="Sólo se aceptan números en el campo sección" title="SOLO_ACEPT_NUM_CAMPO_SECCION"/>
+    <mensaje id="61" value="Sólo se admiten 2 números en el campo sección" title="SOLO_ADMITEN_2_NUM"/>
+    <mensaje id="62" value="Ingrese alguna sección" title="INGRESE_AL_SEC"/>
+    <mensaje id="63" value="Datos actualizados" title="SE_HA_REEMPL_PROFESOR"/>
+    <mensaje id="64" value="Alumno/a creado exitósamente en la sección " title="ALUMNO_CREADO_EXI"/>
+    <mensaje id="65" value="Primero debe crear alguna sección" title="PRIMERO_CREAR_SEC"/>
+    <mensaje id="66" value="GENERANDO REPORTE" title="GENERANDO_REPORTE"/>
+    <mensaje id="67" value="No hay ejercicios" title="NO_HAY_EJER"/>
+    <mensaje id="68" value="Rango de fechas incorrecto" title="RANGO_FECHAS_INCORR"/>
+    <mensaje id="69" value="No hay ejercicios en el rango de años " title="NO_HAY_EJER_RANGO_ANIOS"/>
+    <mensaje id="70" value="Seleccione algún profesor/a de la lista" title="SELEC_ALGUN_PROFESOR_LISTA"/>
+    <mensaje id="71" value="Las contraseñas no coinciden. Por favor revise" title="LAS_CONTRASENAS_NO_COINCIDEN"/>
+    <mensaje id="72" value="SU CONTRASEÑA SE HA CAMBIADO EXITOSAMENTE" title="SU_CONTRASENA_CAMBIADO_OK"/>
+    <mensaje id="73" value="La contraseña debe contener lo siguiente\n\n" title="LAS_CONTR_CONTENER_SIG"/>
+    <mensaje id="74" value="Un mínimo de 6 caracteres" title="UN_MINIMO_DE_6"/>
+    <mensaje id="75" value="Un largo máximo de 12 carácteres" title="UN_LARGO_MAX_12"/>
+    <mensaje id="76" value="Números" title="NUMEROS"/>
+    <mensaje id="77" value="Letras mayúsculas" title="LETRAS_MAYUSCULAS"/>
+    <mensaje id="78" value="Letras minúsculas" title="LETRAS_MINUSCULAS"/>
+    <mensaje id="79" value="Se generará automáticamente los alumnos/as del archivo. \nRecuerde haber generado las secciones correspondientes.Por favor sea paciente" title="SE_GEN_AUT_LOS_ALUMNOS"/>
+    <mensaje id="80" value="Alumnos/as generados automáticamente. Número de Alumnos" title="ALUMNOS_GENERADOS_AUTO"/>
+    <mensaje id="81" value="Recuerde que al ELIMINAR una sección tambien ELIMINARÄ a TODOS sus ALUMNOS/AS. ¿Realmente desea ELIMINAR la sección " title="REC_ELI_SEC"/>
+    <mensaje id="82" value="SECCIÓN ELIMINADA " title="SECCION_ELIMINADA"/>
+    <mensaje id="83" value="Debe seleccionar alguna sección" title="DEBE_SEL_ALGUN_SEC"/>
+    <mensaje id="84" value="Recuerde que al ELIMINAR a un ALUMNO/A tambien ELIMINARÁ TODOS sus EJERCICIOS. ¿Realmente desea eliminar al ALUMNO/A? " title="REC_ELI_ALU"/>
+    <mensaje id="85" value="ALUMNO/A ELIMINADO " title="ALUMNO_ELIMINADO"/>
+    <mensaje id="86" value="Debe seleccionar algún alumno/a" title="DEBE_SEL_ALGUN_ALU"/>
+    <mensaje id="87" value="¿Realmente desea deshabilitar al profesor/a " title="REC_ELI_PRO"/>
+    <mensaje id="88" value="PROFESOR/A DESHABILITADO/A " title="PROFESOR_ELIMINADO"/>
+    <mensaje id="89" value="Debe seleccionar algún/a profesor/a" title="DEBE_SEL_ALGUN_PRO"/>
+    <mensaje id="90" value="Su cuenta se encuentra desactivada. Contáctese con el Administrador para activarla" title="SU_CUENTA_DESACT"/>
+    <mensaje id="91" value="¿Realmente desea actualizar la sección?" title="REALMENTE_DESEA_ACT_SEC"/>
+    <componente id="92" value="Ayuda" title="AYUDA"/>
+    <componente id="93" value="Ayuda de contenidos" title="AYUDA_DE_CONTENIDOS"/>
+    <!-- IDIOMA -->
+    <idioma id="94" value="Idioma" title="IDIOMA"/>
+    <componente id="95" value="Sin profesor" title="SIN_PROFESOR"/>
+</config>

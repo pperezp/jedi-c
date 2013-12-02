@@ -1,0 +1,4 @@
+llenarComboSecciones(); ver bien la consulta, tener cuidado con los cod_pro = null
+
+crear un filtro para las secciones
+    seria ideal que saliera la cantidad de alumnos por sección abajito
