@@ -1,0 +1,9 @@
+/*Este ejercicio es de prueba para rellenar la base de datos*/
+
+#include <stdio.h>
+#include <conio.h>
+
+int main(){
+    printf("Esjercicio JEDI-C");
+    getche();
+}
