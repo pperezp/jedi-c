@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ayuda>
+    <componente id="variable">
+        <definicion>
+            En programación, las variables son espacios reservados en la memoria
+            que, como su nombre indica, pueden cambiar de contenido a lo largo 
+            de la ejecución de un programa.
+        </definicion>
+        <ejemplo>
+            char letra; //variable llamada letra del tipo char
+            short edad; //variable llamada edad del tipo short
+        </ejemplo>
+    </componente>
+    <componente id="ciclo while">
+        <definicion>
+            El bucle while es una estructura cuyo propósito es repetir un 
+            bloque de código mientras una condición se mantenga verdadera.
+        </definicion>
+        <ejemplo>
+            <![CDATA[ 
+            #include<stdio.h>
+
+            main(){
+                int numero;
+
+                printf("\nIngrese el número mágico: ");
+                scanf("%d", &numero);
+
+                while(numero != 1){ //mientras el número sea distinto de 1
+                    printf("\nIngrese el número mágico: "); //leo otro número
+                    scanf("%d", &numero);
+                }
+                printf("\nBien, has descubierto el número mágico! [1]");
+                getche();
+            }
+
+
+            Como pueden apreciar, este ciclo while se hará hasta que el usuario ingrese
+            el número mágico, que en este ejemplo es el número 1
+            ]]>
+        </ejemplo>
+    </componente>
+    <componente id="ciclo do while">
+        <definicion>
+            El bucle do while es una estructura cuyo propósito es repetir un 
+            bloque de código mientras una condición se mantenga verdadera, 
+            con la salvedad que siempre se ejecutará por lo menos una vez.
+        </definicion>
+        <ejemplo>
+            <![CDATA[ 
+            #include<stdio.h>
+
+            main(){
+                int numero;
+
+                do{
+                    printf("\nIngrese el número mágico: "); 
+                    scanf("%d", &numero);
+                }while(numero != 1); //mientras el número no sea 1, 
+                                     //se devolverá al "printf("\nIngrese el número mágico: ");"
+
+                printf("\nBien, has descubierto el número mágico! [1]");
+                getche();
+            }
+
+
+            Como pueden apreciar, este ciclo do while se hará hasta que el usuario 
+            ingrese el número mágico, que en este ejemplo es el número 1
+            ]]>
+        </ejemplo>
+    </componente>
+    <componente id="if">
+        <definicion>
+            La sentencia if en programación, se utiliza para controlar
+            el flujo del programa y permitir la ejecución de una serie 
+            de lineas de código si es que se cumple una condición.
+        </definicion>
+        <ejemplo>
+            <![CDATA[ 
+            #include<stdio.h>
+
+            main(){
+                int numero;
+
+                printf("\nIngrese un número: "); 
+                scanf("%d", &numero);
+
+                if(numero == 1){ // si el número ingresado es el 1, imprime
+                                 // un mensaje por pantalla
+                    printf("\n el número es el 1!");
+                }
+
+                printf("\n Adios!");
+                getche();
+            }
+            ]]>
+        </ejemplo>
+    </componente>
+    <componente id="if else">
+        <definicion>
+            La sentencia de programación if else se utiliza para controlar 
+            el flujo del programa al igual que la sentencia if. Si la condición 
+            de la sentencia if es falsa, se dirige automáticamente a la porción 
+            de código que se encuetra agrupada en la sentencia else.
+        </definicion>
+        <ejemplo>
+            <![CDATA[ 
+            #include<stdio.h>
+
+            main(){
+                int numero;
+
+                printf("\nIngrese un número: "); 
+                scanf("%d", &numero);
+
+                if(numero == 1){ // si el número ingresado es el 1, imprime
+                                 // un mensaje por pantalla
+                    printf("\n el número es el 1!");
+                }else{
+                    printf("\n el número no es el 1!");
+                }
+
+                printf("\n Adios!");
+                getche();
+            }
+            ]]>
+        </ejemplo>
+    </componente>
+    <componente id="ciclo for">
+        <definicion>
+            El ciclo for es una estructura de control en la que se puede indicar
+            el número minimo de iteraciones (acción de repetir una serie de pasos 
+            varias veces). 
+            
+            El ciclo for consta de tres partes en su declaración: 
+                1º.Declaración de variable a utiliza; 
+                2º.Condición booleana: si esta condición es verdadera, se procese a 
+                    ejecutar todo el código del ciclo; 
+                3º.- Incrementar o decrementar la variable: en esta parte de la 
+                    estructura se define la cantidad de incremento o decremento 
+                    que puede realizar el ciclo.
+        </definicion>
+        <ejemplo>
+            <![CDATA[ 
+            for( i = 0; i < 10 ; i = i + 1 ){
+                //ciclo for que iterará 10 veces, con un incremento de 1
+            }
+            ]]>
+        </ejemplo>
+    </componente>
+    <componente id="ciclo for x2">
+        <definicion>
+            El ciclo forx2, se utiliza generalmente para recorrer matrices. 
+            Consta de un ciclo for dentro de otro ciclo. Se suelen utilzar 
+            los nombre de variables i y k; i para las filas y k para las columnas.
+        </definicion>
+        <ejemplo>
+            <![CDATA[ 
+            //declaración de variables
+            int i, k; 
+
+
+            for( i = 0; i < 10 ; i = i + 1 ){
+                for( k = 0 ; k < 15 ; k = k + 1){
+                    //en este ejemplo, se recorrerá una
+                    //matriz de tamaño 10 x 15
+
+                    //el primer ciclo es para recorrer las filas (i)
+                    //el segundo ciclo es para recorrer las columnas (k)
+                }
+            }
+            ]]>
+        </ejemplo>
+    </componente>
+    <componente id="switch case">
+        <definicion>
+            Una forma clara de explicar esto, es con un ejemplo. 
+            
+            Nos solicitan un código fuente el cual determine el nombre del día 
+            de la semana sólo ingresando un número. Por ejemplo, si ingreso 1, 
+            debe que decir lunes, si ingreso 2, martes y así sucesivamente. 
+
+            Una forma de hacerlo sería con estructuras de if else anidados, 
+            preguntando si numero es igual a 1, imprima lunes, de lo contrario 
+            si es igual a 2 imprima martes. La manera más apropiada es hacerlo 
+            con un switch case de la siguiente forma.
+            
+        </definicion>
+        <ejemplo>
+            switch(numero){
+                case 1:{
+                    printf("\n Lunes");
+                    break;
+                }
+                case 2:{
+                    printf("\n Martes");
+                    break;
+                }
+                case 3... y así sucesivamente.
+                
+                default:{
+                    printf("Ingrese días entre 1 y 7");
+                    //entrara a default si no se encuentra un case para el 
+                    //número ingresado
+                    //por ejemplo: número = 9
+                }
+                
+                La palabra reservada break sirve para quebrar el flujo, y salir 
+                inmediatamente del switch. Si esta palanra no se escribe em cada 
+                case, ejecutará el case seleccionado, pero seguirá con los demas 
+                no importando si es el número escogido.
+            }
+        </ejemplo>
+    </componente>
+    <componente id="funcion">
+        <definicion>
+            Una función es un conjunto de líneas de código que se pueden utilizar
+            referenciándolas con un nombre. su estructura es la siguiente:
+            
+            tipo_de_retorno nombre_funcion(parámetros){
+                //todo el código va aquí
+            }
+            
+            tipo_de_retorno: es el tipo de retorno que devolverá dicha función.
+            por ejemplo, si la funcion se llama sumar, para sumar dos numeros, y
+            queremos sumar dos números del tipo int, el tipo de retorno sería int
+            
+            nombre_funcion: es el nombre de la función. Por ejemplo: sumar
+            
+            parámetros: Son los datos que se le entrega a la función para procesarlos
+            Por ejemplo: para poder sumar dos números, debemos entregarle esos dos
+            números, indicando su tipo de datos. 
+            En este caso sería así: int sumar(int numero1, int numero2)
+        </definicion>
+        <ejemplo>
+            <![CDATA[
+            int sumar(int numero1, int numero2){
+                int suma = numero1 + numero2;
+                return suma; //retornará la suma de los dos números pasados
+                             //como parámetros
+            }
+
+            Las variables numero1 y numero2, sólo se pueden utilizar en dicha función
+            en este caso, sólo en sumar.
+
+            Para poder llamar a esta función desde la función main, se haría de la 
+            siguiente forma:
+
+            #include <stdio.h>
+            #include <conio.h>
+
+            int sumar(int numero1, int numero2);
+            /*Esta es la declaración de la función que utilizaremos*/
+
+            main(){
+                int n1, n2;
+                int suma;
+                n1 = 1;
+                n2 = 1;
+
+                suma = sumar(n1, n2); // acá llamamos a la función y nos retornará la suma
+                printf("\n La suma es: %d", suma); //es %d, ya que el retorno de la función
+                                                   //es del tipo int
+                getche();
+            }
+
+            /*Función sumar*/
+            int sumar(int numero1, int numero2){
+                int suma = numero1 + numero2;
+                return suma; //retornará la suma de los dos números pasados
+                             //como parámetros
+            }
+            ]]>
+        </ejemplo>
+    </componente>
+    <componente id="libreria">
+        <definicion>
+            En C, se conoce como librerías (o bibliotecas) a cierto tipo de 
+            archivos que podemos importar o incluir en nuestro programa. Estos 
+            archivos contienen funciones ya construidas y utilizables que 
+            podremos agregar a nuestro programa, como por ejemplo leer del
+            teclado o mostrar algo por pantalla entre muchas otras más.
+        </definicion>
+        <ejemplo>
+            <![CDATA[
+            Para incluir una librería, se hace de la siguiente manera
+            #include <stdio.h>
+
+            // De esta manera se incluye en el código, todas las funcionalidades
+            // del archivo stdio.h del lenguaje C
+
+            si queremos incluir nuestras propias librerías, con extensión .h
+            se hace de la siguiente manera:
+
+            #include "ruta_del_archivo.h"
+            ]]>
+        </ejemplo>
+    </componente>
+    <componente id="printf">
+        <definicion>
+            <![CDATA[ 
+                Función predefinida en C para enviar un texto por pantalla 
+                (llamado tambien "imprimir por pantalla"). Para utilizar esta 
+                función debes incluir la librería stdio.h (standart input output) 
+                de la siguiente manera: #include <stdio.h>
+            ]]>
+        </definicion>
+        <ejemplo>
+            printf("\n Hola, este es un mensaje");
+        </ejemplo>
+    </componente>
+    <componente id="scanf">
+        <definicion>
+            <![CDATA[ 
+            Función predefinida en C para analizar una entrada de datos 
+            por teclado. Para utilizar esta función debes incluir la librería 
+            stdio.h (standart input output) de la siguiente manera: #include <stdio.h>
+
+            Tipos de datos básicos para la lectura de datos:
+
+            %d : lee un numero int
+            %c : lee un carácter del tipo char
+            %s : una cadena de texto, un arreglo de char (por ejemplo, un nombre)
+            %f : un número decimal del tipo float
+
+            Sintaxis:
+
+                scanf(tipo, &var);
+
+                tipo            : tipo de dato a almacenar
+                ampersand (&)   : se utiliza para indicar una dirección de memoria 
+                                  de la variable donde se almacenará el dato. 
+                                  Cuando se guardan de cadenas de caracteres, al tratarse 
+                                  de un array de tipo char, el & se omite.
+                var             : variable para almacenar el dato.
+            ]]>
+        </definicion>
+        <ejemplo>
+            <![CDATA[ 
+            // Este ejemplo guarda un número en n.
+
+             int n;
+             printf("Introduce un numero: ");
+             scanf("%d",&n);
+
+             // Este ejemplo guarda un caracter en m.
+
+             char m;
+             printf("Introduce un caracter: ");
+             scanf("%c",&m);
+
+             // Este ejemplo guarda una cadena de caracteres (solamente una palabra) en cad. 
+             // Notese la ausencia de &
+
+             char cad[20];
+             printf("Introduce una palabra: ");
+             scanf("%s",cad);
+            ]]>
+        </ejemplo>
+    </componente>
+    <componente id="getche">
+        <definicion>
+            <![CDATA[
+            Función predefinida en C la cual permite una pausa donde se 
+            encuentre la llamada a getche();. Para utilizar esta función, 
+            es necesario importar la librería conio.h, de la siguiente forma: 
+
+            #include <conio.h>
+            ]]>
+        </definicion>
+        <ejemplo>
+            <![CDATA[
+            ...
+
+            getche(); //pausa el programa justo aquí
+
+            ...
+            ]]>
+        </ejemplo>
+    </componente>
+    <componente id="system cls">
+        <definicion>
+            Función predefinida en C para poder limpiar pantalla. Sólo 
+            funciona en sistemas operativos Windows. Para poder utilizar
+            esta función, hay que incluir la librería stdlib.h.
+        </definicion>
+        <ejemplo>
+            <![CDATA[
+            #include <stdio.h>
+            #include <stdlib.h>
+            #include <conio.h>
+
+            main(){
+                printf("\nEste mensaje no se verá en pantalla"); 
+                system("cls"); //limpiando pantalla
+                printf("\nEste mensaje si se verá en pantalla");
+                getche();
+            }
+            ]]>
+        </ejemplo>
+    </componente>
+    <componente id="system pause">
+        <definicion>
+            Función predefinida en C para poder hacer una pausa en el programa. 
+            Sólo funciona en sistemas operativos Windows. Para poder utilizar
+            esta función, hay que incluir la librería stdlib.h.
+        </definicion>
+        <ejemplo>
+            <![CDATA[
+            #include <stdio.h>
+            #include <stdlib.h>
+            #include <conio.h>
+
+            main(){
+                printf("\nHola"); 
+                system("pause"); //Pausando el programa
+                printf("\nChao");
+                getche();
+            }
+            ]]>
+        </ejemplo>
+    </componente>
+    <componente id="long">
+        <definicion>
+            Dato para representar números enteros con o sin signo. 
+            El rango de números posibles es: 
+                
+            Para poder imprimir este tipo de dato, debe colocar %ld.
+        </definicion>
+        <ejemplo>
+            long numero = 1500000;
+            printf("\n El número es: %ld", numero);
+        </ejemplo>
+    </componente>
+    <componente id="float">
+        <definicion>
+            Dato para representar números decimales.
+            El rango de números posibles es:
+                desde 3,4x10^-38 hasta 3,4x10^38
+            Para poder imprimir este tipo de dato, debe colocar %f.
+        </definicion>
+        <ejemplo>
+            float numero = 12.3;
+            printf("\n El número es: %f", numero);
+        </ejemplo>
+    </componente>
+    <componente id="bool">
+        <definicion>
+            Dato para representar dos estados posibles: true o false.
+        </definicion>
+        <ejemplo>
+            bool expresion = false;
+            if(expresion == true){ //no es necesario poner "== true", sólo podría ser if(expresion)
+                printf("\n Expresión verdadera");
+            }else{
+                printf("\n Expresión falsa");
+            }
+        </ejemplo>
+    </componente>
+    <componente id="int">
+        <definicion>
+            Dato para representar números enteros con o sin signo.
+            El rango de números posibles es:
+                desde -2147483648 hasta 2147423647. 
+            Para poder imprimir este tipo de dato, debe colocar %d.
+        </definicion>
+        <ejemplo>
+            int edad = 35;
+            printf("\n La edad es: %d", edad);
+        </ejemplo>
+    </componente>
+    <componente id="double">
+        <definicion>
+            Dato para representar números decimales (más precición que float).
+            El rango de números posibles es:
+                desde 1,7x10^-308 hasta 1,7x10^308
+            Para poder imprimir este tipo de dato, debe colocar %g.
+        </definicion>
+        <ejemplo>
+            double numero = 0.000000025;
+            printf("\n El número es: %g", numero);
+        </ejemplo>
+    </componente>
+    <componente id="char">
+        <definicion>
+            Dato para representar un caracter.
+            Para poder imprimir este tipo de dato, debe colocar %c.
+        </definicion>
+        <ejemplo>
+            char letra = 'a';
+            printf("\n La letra es: %c", letra);
+        </ejemplo>
+    </componente>
+    <componente id="short">
+        <definicion>
+            Dato para representar números enteros con o sin signo.
+            El rango de números posibles es:
+                desde -32768 hasta 32767
+            Para poder imprimir este tipo de dato, debe colocar %d.
+        </definicion>
+        <ejemplo>
+            short numero = 1;
+            printf("\n El número es: %d", numero);
+        </ejemplo>
+    </componente>
+</ayuda>
