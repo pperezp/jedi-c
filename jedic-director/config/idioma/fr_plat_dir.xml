@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<config idioma="Français">
+	<!-- TITULOS -->
+    <titulo id="0" value="Plate-forme de Directeur" title="PLATAFORMA_DIRECTOR"/>
+    <titulo id="1" value="Créer professeur" title="CREAR_PROFESOR"/>
+    <titulo id="2" value="Créer ou céder la section" title="CREAR_O_ASIGNAR_SECCION"/>
+    <titulo id="3" value="Modifier professeur" title="MODIFICAR_PROFESOR"/>
+    <titulo id="4" value="Créer étudiants" title="CREAR_ALUMNOS"/>
+    <titulo id="5" value="Rapports" title="REPORTES"/>
+    <titulo id="6" value="Rapports avancés" title="REPORTES_AVANZADOS"/>
+    <titulo id="7" value="Directeur" title="DIRECTOR"/>
+    <titulo id="8" value="Siège" title="SEDE"/>
+	<!-- COMPONENTES -->
+    <componente id="9" value="l'information" title="INFORMACION"/>
+    <componente id="10" value="N° de la section" title="N_DE_SECCION"/>
+    <componente id="11" value="Professeur" title="PROFESOR"/>
+    <componente id="12" value="Créer une section" title="CREAR_SECCION"/>
+    <componente id="13" value="Liste la Section" title="LISTADO_SECCIONES"/>
+    <componente id="14" value="Code" title="CODIGO"/>
+    <componente id="15" value="Nombre de la section" title="NUM_SECCION"/>
+    <componente id="16" value="Le nom du professeur" title="NOMBRE_PROFESOR"/>
+    <componente id="17" value="E-Mail" title="MAIL"/>
+    <componente id="18" value="Liste des enseignants" title="LISTADO_PROFESORES"/>
+    <componente id="19" value="Utilisateur" title="USUARIO"/>
+    <componente id="20" value="Mot de passe" title="CONTRASENA"/>
+    <componente id="21" value="Connecter" title="INICIAR_SESION"/>
+    <componente id="22" value="Mot de passe oublié" title="RECUPERAR_CONTRASENA"/>
+    <componente id="23" value="Professeurs existants" title="PROFESORES_VIGENTES"/>
+    <componente id="24" value="Professeurs ne sont plus en vigueur" title="PROFESORES_NO_VIGENTES"/>
+    <componente id="25" value="Détails du personnel enseignant" title="DATOS_NUEVO_PROFESOR"/>
+    <componente id="26" value="Mise à jour des données des enseignants" title="REEMPLAZAR_PROFESOR"/>
+    <componente id="27" value="Section" title="SECCION"/>
+    <componente id="28" value="Créer des étudiants" title="CREAR_ALUMNO"/>
+    <componente id="29" value="Importer à partir d' XLS" title="IMPORTAR_XLS"/>
+    <componente id="30" value="Liste des étudiants" title="LISTADO_ALUMNOS"/>
+    <componente id="31" value="Nom" title="NOMBRE"/>
+    <componente id="32" value="Sections" title="SECCIONES"/>
+    <componente id="33" value="Les articles qui utilisent plus de l'application" title="SECCIONES_UTIL_MAS_APLI"/>
+    <componente id="34" value="Date de début" title="FECHA_INICIO"/>
+    <componente id="35" value="Date de fin" title="FECHA_TERMINO"/>
+    <componente id="36" value="Professeurs" title="PROFESORES"/>
+    <componente id="37" value="Les enseignants qui utilisent l'application plus" title="PROFESORES_UTIL_MAS_APLI"/>
+    <componente id="38" value="Les données du rapport" title="DATOS_REPORTE"/>
+    <componente id="39" value="À partir de" title="DESDE"/>
+    <componente id="40" value="(Année)" title="ANIO"/>
+    <componente id="41" value="À" title="HASTA"/>
+    <componente id="42" value="Changer mot de passe" title="CAMBIAR_CONTRASENA"/>
+    <componente id="43" value="Mot de passe Nouvel" title="CONTRASENA_NUEVA"/>
+    <componente id="44" value="Répétez le mot de passe" title="REPETIR_CONTRASENA"/>
+    <componente id="45" value="Erreurs" title="ERRORES"/>
+	<!-- MENSAJES -->
+    <mensaje id="46" value="Erreur lors de la connexion. Vérifiez votre nom d'utilisateur et / ou mot de passe" title="ERROR_INICIAR_SESION_COMPR_NOM"/>
+    <mensaje id="47" value="Vous devez entrer le nom d'utilisateur pour récupérer votre mot de passe" title="DEBE_ESCR_NOM_USU"/>
+    <mensaje id="48" value="Apparemment, vous n'avez pas une connexion Internet. Impossible de récupérer votre mot de passe" title="AL_PARECER_NO_CONEXION"/>
+    <mensaje id="49" value="Désactiver" title="ELIMINAR"/><!--BOTON ELIMINAR DE TODAS LAS PESTAÑAS-->
+    <mensaje id="50" value="Déconnexion" title="CERRAR_SESION"/>
+    <mensaje id="51" value="Professeur créé avec succès" title="PROFESOR_CREADO_EXITO"/>
+    <mensaje id="52" value="E-mail incorrecte" title="MAIL_INCORRECTO"/>
+    <mensaje id="53" value="Professeur mauvais nom" title="NOMBRE_PROFESOR_INCO"/>
+    <mensaje id="54" value="Aucun des symboles ou des chiffres sont autorisés" title="NO_SE_PERMIT_SIMB"/>
+    <mensaje id="55" value="Les données manquantes. Votre avis" title="FALTAN_DATOS"/>
+    <mensaje id="56" value="L'utilisateur est déjà dans les dossiers de base de données. Est renommé " title="EL_USU_YA_SE_ENCUENTRA"/>
+    <mensaje id="57" value="Section Mise à jour: section #" title="SECCION_ACTUALIZADA"/>
+    <mensaje id="58" value="Section a été créée correctement: Section #" title="SECCION_CREADA_EXITO"/>
+    <mensaje id="59" value="Les articles ne sont pas autorisés de moins de 1" title="NO_SE_ADMITEN_SEC_MEN_1"/>
+    <mensaje id="60" value="Nous acceptons uniquement les numéros dans la section" title="SOLO_ACEPT_NUM_CAMPO_SECCION"/>
+    <mensaje id="61" value="Seulement en charge 2 chiffres dans la section" title="SOLO_ADMITEN_2_NUM"/>
+    <mensaje id="62" value="Entrez une section" title="INGRESE_AL_SEC"/>
+    <mensaje id="63" value="Données mises à jour" title="SE_HA_REEMPL_PROFESOR"/>
+    <mensaje id="64" value="Étudiants a réussi à créer dans la section " title="ALUMNO_CREADO_EXI"/>
+    <mensaje id="65" value="Vous devez d'abord créer une section" title="PRIMERO_CREAR_SEC"/>
+    <mensaje id="66" value="PRODUIRE LE RAPORRT" title="GENERANDO_REPORTE"/>
+    <mensaje id="67" value="Il n'y a pas d'exercices" title="NO_HAY_EJER"/>
+    <mensaje id="68" value="Plage de dates incorrect" title="RANGO_FECHAS_INCORR"/>
+    <mensaje id="69" value="Il n'y a pas d'exercices dans le nombre d'années" title="NO_HAY_EJER_RANGO_ANIOS"/>
+    <mensaje id="70" value="Sélectionnez un enseignant de la liste" title="SELEC_ALGUN_PROFESOR_LISTA"/>
+    <mensaje id="71" value="Les mots de passe ne correspondent pas. S'il vous plaît vérifiez" title="LAS_CONTRASENAS_NO_COINCIDEN"/>
+    <mensaje id="72" value="VOTRE MOT DE PASSE A été changé avec succès" title="SU_CONTRASENA_CAMBIADO_OK"/>
+    <mensaje id="73" value="Le mot de passe doit contenir les éléments suivants\n\n" title="LAS_CONTR_CONTENER_SIG"/>
+    <mensaje id="74" value="Un minimum de 6 caractères" title="UN_MINIMO_DE_6"/>
+    <mensaje id="75" value="Une longueur maximale de 12 caractères" title="UN_LARGO_MAX_12"/>
+    <mensaje id="76" value="Nombres" title="NUMEROS"/>
+    <mensaje id="77" value="Les lettres majuscules" title="LETRAS_MAYUSCULAS"/>
+    <mensaje id="78" value="Petites lettres" title="LETRAS_MINUSCULAS"/>
+    <mensaje id="79" value="Il génère automatiquement les anciens élèves du fichier. \nRappelez-vous d'avoir généré des sections correspondientes.Por s'il vous plaît soyez patient" title="SE_GEN_AUT_LOS_ALUMNOS"/>
+    <mensaje id="80" value="Les étudiants sont générés automatiquement. Nombre d'étudiants" title="ALUMNOS_GENERADOS_AUTO"/>
+    <mensaje id="81" value="Rappelez-vous que la suppression d'une section va également supprimer l'ensemble de ses étudiants. Voulez-vous vraiment de supprimer la section? " title="REC_ELI_SEC"/>
+    <mensaje id="82" value="SECTION ENLEVÉE " title="SECCION_ELIMINADA"/>
+    <mensaje id="83" value="Vous devez sélectionner une section" title="DEBE_SEL_ALGUN_SEC"/>
+    <mensaje id="84" value="Rappelez-vous qu'un étudiant aussi éliminer éliminer tous vos EXERCICES. Voulez-vous vraiment supprimer l'élève? " title="REC_ELI_ALU"/>
+    <mensaje id="85" value="ÉTUDIANT ENLEVÉ" title="ALUMNO_ELIMINADO"/>
+    <mensaje id="86" value="Vous devez sélectionner un étudiant" title="DEBE_SEL_ALGUN_ALU"/>
+    <mensaje id="87" value="Voulez-vous vraiment désactiver l'enseignant?" title="REC_ELI_PRO"/>
+    <mensaje id="88" value="ENSEIGNANT DE" title="PROFESOR_ELIMINADO"/>
+    <mensaje id="89" value="Vous devez sélectionner un enseignant" title="DEBE_SEL_ALGUN_PRO"/>
+    <mensaje id="90" value="Votre compte est désactivé. Contactez l'administrateur pour activer" title="SU_CUENTA_DESACT"/>
+    <mensaje id="91" value="Voulez-vous vraiment à mettre à jour la section?" title="REALMENTE_DESEA_ACT_SEC"/>
+    <componente id="92" value="Aider" title="AYUDA"/>
+    <componente id="93" value="Contenu de l'aide" title="AYUDA_DE_CONTENIDOS"/>
+    <!-- IDIOMA -->
+    <idioma id="94" value="Langue" title="IDIOMA"/>
+    <componente id="95" value="Sans professeur" title="SIN_PROFESOR"/>
+</config>
+

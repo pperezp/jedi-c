@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reporteEjerciciosSecciones" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="profesor" class="java.lang.String"/>
+	<field name="nombre" class="java.lang.String"/>
+	<group name="secciones">
+		<groupExpression><![CDATA[$F{nombre}]]></groupExpression>
+		<groupHeader>
+			<band/>
+		</groupHeader>
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="42" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="802" height="31"/>
+				<textElement>
+					<font size="20" isBold="true" isItalic="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Reporte Comparativo Años: Profesor]]></text>
+			</staticText>
+			<textField>
+				<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="367" y="0" width="435" height="31" forecolor="#FF0000"/>
+				<textElement>
+					<font size="18" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{profesor}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="445" splitType="Stretch">
+			<bar3DChart>
+				<chart>
+					<reportElement x="29" y="41" width="338" height="172"/>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<categoryDataset>
+					<categorySeries>
+						<seriesExpression><![CDATA["Año "+$F{nombre}]]></seriesExpression>
+						<categoryExpression><![CDATA[$F{nombre}]]></categoryExpression>
+						<valueExpression><![CDATA[$V{secciones_COUNT}]]></valueExpression>
+					</categorySeries>
+				</categoryDataset>
+				<bar3DPlot>
+					<plot/>
+					<itemLabel color="#000000" backgroundColor="#FFFFFF"/>
+					<categoryAxisFormat>
+						<axisFormat>
+							<labelFont/>
+							<tickLabelFont/>
+						</axisFormat>
+					</categoryAxisFormat>
+					<valueAxisFormat>
+						<axisFormat>
+							<labelFont/>
+							<tickLabelFont/>
+						</axisFormat>
+					</valueAxisFormat>
+				</bar3DPlot>
+			</bar3DChart>
+			<staticText>
+				<reportElement positionType="Float" x="6" y="41" width="23" height="95"/>
+				<textElement rotation="Left">
+					<font isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[Ejercicios]]></text>
+			</staticText>
+			<pieChart>
+				<chart>
+					<reportElement x="391" y="41" width="411" height="172"/>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<pieDataset>
+					<keyExpression><![CDATA["Año: "+$F{nombre}]]></keyExpression>
+					<valueExpression><![CDATA[$V{secciones_COUNT}]]></valueExpression>
+					<labelExpression><![CDATA["Año "+$F{nombre}+"\n"+$V{secciones_COUNT}+" Ejercicios"]]></labelExpression>
+				</pieDataset>
+				<piePlot>
+					<plot/>
+					<itemLabel color="#000000" backgroundColor="#FFFFFF"/>
+				</piePlot>
+			</pieChart>
+			<areaChart>
+				<chart>
+					<reportElement x="145" y="251" width="467" height="194"/>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<categoryDataset>
+					<categorySeries>
+						<seriesExpression><![CDATA["Año "+$F{nombre}]]></seriesExpression>
+						<categoryExpression><![CDATA[$F{nombre}]]></categoryExpression>
+						<valueExpression><![CDATA[$V{secciones_COUNT}]]></valueExpression>
+					</categorySeries>
+				</categoryDataset>
+				<areaPlot>
+					<plot/>
+					<categoryAxisFormat>
+						<axisFormat>
+							<labelFont/>
+							<tickLabelFont/>
+						</axisFormat>
+					</categoryAxisFormat>
+					<valueAxisFormat>
+						<axisFormat>
+							<labelFont/>
+							<tickLabelFont/>
+						</axisFormat>
+					</valueAxisFormat>
+				</areaPlot>
+			</areaChart>
+			<staticText>
+				<reportElement x="29" y="21" width="338" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true" isItalic="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Gráfico de Barras]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="391" y="21" width="411" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true" isItalic="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Gráfico Circular]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="145" y="231" width="467" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true" isItalic="true" isUnderline="true" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[Gráfico de Áreas]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<config idioma="English">
+	<!-- TITULOS -->
+    <titulo id="0" value="Director platform" title="PLATAFORMA_DIRECTOR"/>
+    <titulo id="1" value="Create teacher" title="CREAR_PROFESOR"/>
+    <titulo id="2" value="Create or assign section" title="CREAR_O_ASIGNAR_SECCION"/>
+    <titulo id="3" value="Modify professor" title="MODIFICAR_PROFESOR"/>
+    <titulo id="4" value="Create students" title="CREAR_ALUMNOS"/>
+    <titulo id="5" value="Reports" title="REPORTES"/>
+    <titulo id="6" value="Advanced Reports" title="REPORTES_AVANZADOS"/>
+    <titulo id="7" value="Director" title="DIRECTOR"/>
+    <titulo id="8" value="Headquarters" title="SEDE"/>
+	<!-- COMPONENTES -->
+    <componente id="9" value="Information" title="INFORMACION"/>
+    <componente id="10" value="Nº of Section" title="N_DE_SECCION"/>
+    <componente id="11" value="Teacher" title="PROFESOR"/>
+    <componente id="12" value="Create Section" title="CREAR_SECCION"/>
+    <componente id="13" value="List of sections" title="LISTADO_SECCIONES"/>
+    <componente id="14" value="Code" title="CODIGO"/>
+    <componente id="15" value="Number of section" title="NUM_SECCION"/>
+    <componente id="16" value="Teacher name" title="NOMBRE_PROFESOR"/>
+    <componente id="17" value="E-Mail" title="MAIL"/>
+    <componente id="18" value="Teachers list" title="LISTADO_PROFESORES"/>
+    <componente id="19" value="User" title="USUARIO"/>
+    <componente id="20" value="Password" title="CONTRASENA"/>
+    <componente id="21" value="Login" title="INICIAR_SESION"/>
+    <componente id="22" value="Password Recovery" title="RECUPERAR_CONTRASENA"/>
+    <componente id="23" value="Existing teachers" title="PROFESORES_VIGENTES"/>
+    <componente id="24" value="Teachers not in force" title="PROFESORES_NO_VIGENTES"/>
+    <componente id="25" value="Data of teacher" title="DATOS_NUEVO_PROFESOR"/>
+    <componente id="26" value="Update teacher data" title="REEMPLAZAR_PROFESOR"/>
+    <componente id="27" value="Section" title="SECCION"/>
+    <componente id="28" value="Create Student" title="CREAR_ALUMNO"/>
+    <componente id="29" value="Import from XLS" title="IMPORTAR_XLS"/>
+    <componente id="30" value="Students list" title="LISTADO_ALUMNOS"/>
+    <componente id="31" value="Name" title="NOMBRE"/>
+    <componente id="32" value="Sections" title="SECCIONES"/>
+    <componente id="33" value="Sections that use more the application" title="SECCIONES_UTIL_MAS_APLI"/>
+    <componente id="34" value="Start Date" title="FECHA_INICIO"/>
+    <componente id="35" value="End Date" title="FECHA_TERMINO"/>
+    <componente id="36" value="Teachers" title="PROFESORES"/>
+    <componente id="37" value="Teachers using more application" title="PROFESORES_UTIL_MAS_APLI"/>
+    <componente id="38" value="Report data" title="DATOS_REPORTE"/>
+    <componente id="39" value="From" title="DESDE"/>
+    <componente id="40" value="(Year)" title="ANIO"/>
+    <componente id="41" value="To" title="HASTA"/>
+    <componente id="42" value="Change password" title="CAMBIAR_CONTRASENA"/>
+    <componente id="43" value="New password" title="CONTRASENA_NUEVA"/>
+    <componente id="44" value="Repeat password" title="REPETIR_CONTRASENA"/>
+    <componente id="45" value="Errors" title="ERRORES"/>
+	<!-- MENSAJES -->
+    <mensaje id="46" value="Error at logon. Check your username and / or password" title="ERROR_INICIAR_SESION_COMPR_NOM"/>
+    <mensaje id="47" value="You must enter the username to recover your password" title="DEBE_ESCR_NOM_USU"/>
+    <mensaje id="48" value="Apparently, you do not have an internet connection. Unable to retrieve your password" title="AL_PARECER_NO_CONEXION"/>
+    <mensaje id="49" value="Disable" title="ELIMINAR"/><!--BOTON ELIMINAR DE TODAS LAS PESTAÑAS-->
+    <mensaje id="50" value="Logout" title="CERRAR_SESION"/>
+    <mensaje id="51" value="Professor created successfully " title="PROFESOR_CREADO_EXITO"/>
+    <mensaje id="52" value="Incorrect E-mail" title="MAIL_INCORRECTO"/>
+    <mensaje id="53" value="Teacher name Incorrect" title="NOMBRE_PROFESOR_INCO"/>
+    <mensaje id="54" value="No symbols or numbers are allowed" title="NO_SE_PERMIT_SIMB"/>
+    <mensaje id="55" value="Missing data. review" title="FALTAN_DATOS"/>
+    <mensaje id="56" value="The user is already in the database records. Is renamed to" title="EL_USU_YA_SE_ENCUENTRA"/>
+    <mensaje id="57" value="Updated section: Section# " title="SECCION_ACTUALIZADA"/>
+    <mensaje id="58" value="Successfully created section: Section #" title="SECCION_CREADA_EXITO"/>
+    <mensaje id="59" value="Sections are not allowed under 1" title="NO_SE_ADMITEN_SEC_MEN_1"/>
+    <mensaje id="60" value="We only accept numbers in the section" title="SOLO_ACEPT_NUM_CAMPO_SECCION"/>
+    <mensaje id="61" value="Only support 2 numbers in the section" title="SOLO_ADMITEN_2_NUM"/>
+    <mensaje id="62" value="Enter a section" title="INGRESE_AL_SEC"/>
+    <mensaje id="63" value="Updated data" title="SE_HA_REEMPL_PROFESOR"/>
+    <mensaje id="64" value="Student successfully created in section" title="ALUMNO_CREADO_EXI"/>
+    <mensaje id="65" value="You must first create a section" title="PRIMERO_CREAR_SEC"/>
+    <mensaje id="66" value="GENERATING REPORT" title="GENERANDO_REPORTE"/>
+    <mensaje id="67" value="There are no exercises" title="NO_HAY_EJER"/>
+    <mensaje id="68" value="Incorrect date range" title="RANGO_FECHAS_INCORR"/>
+    <mensaje id="69" value="There are no exercises in the range of years" title="NO_HAY_EJER_RANGO_ANIOS"/>
+    <mensaje id="70" value="Select a teacher from the list" title="SELEC_ALGUN_PROFESOR_LISTA"/>
+    <mensaje id="71" value="Passwords do not match. Please check" title="LAS_CONTRASENAS_NO_COINCIDEN"/>
+    <mensaje id="72" value="YOUR PASSWORD HAS BEEN CHANGED SUCCESSFULLY" title="SU_CONTRASENA_CAMBIADO_OK"/>
+    <mensaje id="73" value="The password should contain the following\n\n" title="LAS_CONTR_CONTENER_SIG"/>
+    <mensaje id="74" value="A minimum of 6 characters" title="UN_MINIMO_DE_6"/>
+    <mensaje id="75" value="A maximum length of 12 characters" title="UN_LARGO_MAX_12"/>
+    <mensaje id="76" value="Numbers" title="NUMEROS"/>
+    <mensaje id="77" value="Uppercase letters" title="LETRAS_MAYUSCULAS"/>
+    <mensaje id="78" value="Lowercase letters" title="LETRAS_MINUSCULAS"/>
+    <mensaje id="79" value="Students will be automatically generated of the file. \nRemember to have generated the appropriate sections. Please be patient" title="SE_GEN_AUT_LOS_ALUMNOS"/>
+    <mensaje id="80" value="Students are automatically generated. Number of Students" title="ALUMNOS_GENERADOS_AUTO"/>
+    <mensaje id="81" value="Remember that deleting a section will also delete ALL your STUDENTS. Do you really want to DELETE Section? " title="REC_ELI_SEC"/>
+    <mensaje id="82" value="SECTION REMOVED" title="SECCION_ELIMINADA"/>
+    <mensaje id="83" value="You must select any section" title="DEBE_SEL_ALGUN_SEC"/>
+    <mensaje id="84" value="Remember to DELETE a STUDENT EXERCISES also delete all its. Do you really want to delete the STUDENT? " title="REC_ELI_ALU"/>
+    <mensaje id="85" value="STUDENT REMOVED" title="ALUMNO_ELIMINADO"/>
+    <mensaje id="86" value="You must select a student" title="DEBE_SEL_ALGUN_ALU"/>
+    <mensaje id="87" value="Do you really want to disable the teacher?" title="REC_ELI_PRO"/>
+    <mensaje id="88" value="TEACHER DISABLED" title="PROFESOR_ELIMINADO"/>
+    <mensaje id="89" value="You must select any teacher" title="DEBE_SEL_ALGUN_PRO"/>
+    <mensaje id="90" value="Your account is disabled. Contact the administrator to activate" title="SU_CUENTA_DESACT"/>
+    <mensaje id="91" value="Do you really want to update the section?" title="REALMENTE_DESEA_ACT_SEC"/>
+    <componente id="92" value="Help" title="AYUDA"/>
+    <componente id="93" value="Contens help" title="AYUDA_DE_CONTENIDOS"/>
+    <!-- IDIOMA -->
+    <idioma id="94" value="Language" title="IDIOMA"/>
+    <componente id="95" value="Without a teacher" title="SIN_PROFESOR"/>
+</config>
+
