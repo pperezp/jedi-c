@@ -1,0 +1,4 @@
+<ejercicios>
+	<e codigo="1" visto="true"/>
+	<e codigo="2" visto="false"/>
+</ejercicios>

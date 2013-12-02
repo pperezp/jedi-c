@@ -1,0 +1,13 @@
+/* 
+    Document   : estilos
+    Created on : 27-ago-2012, 23:13:53
+    Author     : Pato Pérez
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+    font-family: Arial,Helvetica,sans-serif;
+}
+

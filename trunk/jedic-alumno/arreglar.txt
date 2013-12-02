@@ -1,0 +1,12 @@
+
+que la clase alumno pueda tener una lista de ejercicios profesor
+QUE CUANDO AGREGUE ALGO CON ATUCOMPLETADO, NO SE BAJE SOLO
+
+
+//LO QUE FALTA
+
+
+-que pueda cambiar de nombre los codigos
+-que cuando cambien de nombre, vea si el codigo etsa en tabconte pa que lo cambie
+
+hacer el hacer una pausa
