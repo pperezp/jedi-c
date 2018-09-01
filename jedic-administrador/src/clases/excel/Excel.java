@@ -33,10 +33,10 @@ public class Excel {
     private static Cell celda;
     
     /**
-     * Método para obtener el contenido de una hoja en especifico
+     * Método para obtener el contenido de una hoja en específico
      * @param rutaExcel Ruta del archivo .xls
      * @param hoja Si este parametro debe ser >= 0 
-     * @return Una matriz de Strings con el contenido de ese archivo en dicha hoja, o null si ocurrio algun error
+     * @return Una matriz de Strings con el contenido de ese archivo en dicha hoja, o null si ocurrió algún error
      */
     public static HojaExcel leerArchivo(String rutaExcel, int numeroDeHoja){
         try {
